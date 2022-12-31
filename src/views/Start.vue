@@ -164,6 +164,7 @@ onMounted(async () => {
     calculate();
   });
   watch(date, () => {
+    loadMapCheckBox();
     loadGameData();
     calculate();
   })
@@ -705,7 +706,19 @@ function noAllIgnore(name) {
     return !allIgnore;
   }
 
-  return isGroup ? noAllIgnoreGroup() : (chooseData.maps[name].ignoreCodes ? chooseData.maps[name].ignoreCodes.length < skyMap.getCandlelightPointCodesByName(name).length : true);
+  if (isGroup) {
+    return noAllIgnoreGroup()
+  }
+
+  let availableCodes = skyMap.getCandlelightPointCodesByName(name)
+      .filter(code0 => {
+        return skyMap.getMapByName(name).candlelightPoints.get(code0)
+            .available(date.value ? LocalDate.ofDate(date.value) : LocalDate.now());
+      });
+
+  let ignoreCodes = chooseData.maps[name].ignoreCodes?.filter(code0 => availableCodes.includes(code0)) ?? [];
+
+  return ignoreCodes.length < availableCodes.length;
 }
 
 function noLimit(name) {
@@ -729,7 +742,19 @@ function noLimit(name) {
     return noLimit;
   }
 
-  return isGroup ? noLimitGroup() : !chooseMap.ignoreCodes || !chooseMap.length;
+  if (isGroup) {
+    return noLimitGroup()
+  }
+
+  let availableCodes = skyMap.getCandlelightPointCodesByName(name)
+      .filter(code0 => {
+        return skyMap.getMapByName(name).candlelightPoints.get(code0)
+            .available(date.value ? LocalDate.ofDate(date.value) : LocalDate.now());
+      });
+
+  let ignoreCodes = chooseData.maps[name].ignoreCodes?.filter(code0 => availableCodes.includes(code0)) ?? [];
+
+  return ignoreCodes.length === 0;
 }
 
 function baseAll(checked, basename) {
@@ -767,16 +792,28 @@ function getMapType(name) {
     return empty ? '' : all ? 'success' : 'primary';
   }
 
-  if (chooseData.maps[name].ignoreCodes && chooseData.maps[name].ignoreCodes.length) {
-    if (chooseData.maps[name].ignoreCodes.length === skyMap.getMapByName(name).candlelightPoints.size) {
-      return ''
-    } else {
-      return 'primary'
-    }
+  if (!chooseData.maps[name].ignoreCodes || !chooseData.maps[name].ignoreCodes.length) {
+    return 'success';
   }
 
+  let availableCodes = skyMap.getCandlelightPointCodesByName(name)
+      .filter(code0 => {
+        return skyMap.getMapByName(name).candlelightPoints.get(code0)
+            .available(date.value ? LocalDate.ofDate(date.value) : LocalDate.now());
+      });
 
-  return 'success'
+
+  let ignoreCodes = chooseData.maps[name].ignoreCodes?.filter(code0 => availableCodes.includes(code0)) ?? [];
+
+  if (ignoreCodes.length === 0) {
+    return 'success'
+  }
+
+  if (ignoreCodes.length >= availableCodes.length) {
+    return ''
+  }
+
+  return 'primary'
 }
 
 function getSpecialType(name) {
