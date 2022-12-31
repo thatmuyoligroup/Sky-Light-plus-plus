@@ -9,6 +9,7 @@ const contributor = [
     '<a href="https://weibo.com/u/5685423899">包包</a>',
     '<a href="https://v.kuaishou.com/Ejc9ZN">氢腥</a>',
     '<a href="https://www.gitee.com/jianjianghui" >江晖</a>',
+    '松奈',
     '<a href="https://m.weibo.cn/u/2630772743">冰介</a>',
     '<a href="https://v.kuaishou.com/ESzeL1">海天</a>',
     '阿圤',
