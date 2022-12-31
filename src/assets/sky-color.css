@@ -1,0 +1,17 @@
+:root {
+    --start-bg-color: #fff;
+    --start-box-bg-color: #fff;
+    --start-box-sd: 0 0 15px 0 rgba(0, 169, 234, 0.15);
+}
+
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --start-box-bg-color: #303133;
+        /*--start-bg-color: #212828;*/
+        /*--start-bg-color: #22292a;*/
+        --start-bg-color: #1e2223;
+        --start-box-sd: 0 0 15px 0 rgba(0 44 61, 0.15);
+    }
+
+}

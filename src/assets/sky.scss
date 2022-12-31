@@ -1,0 +1,68 @@
+@import "sky-color.css";
+
+
+.run-where-box {
+  background-color: var(--start-bg-color);
+  border-radius: 10px;
+}
+
+.run {
+  box-shadow: 0 0 20px 0 rgba(211, 211, 211, 0.22) inset;
+  background-color: var(--start-bg-color);
+  border-radius: 10px;
+  min-height: 60vh;
+  padding: 10px;
+}
+
+
+.start-box {
+  color: var(--color-text);
+  padding: 20px;
+  background-color: var(--start-bg-color);
+  box-shadow: var(--start-box-sd);
+  border-radius: 20px;
+
+  //.el-collapse-item__wrap {
+  //  background-color: var(--start-bg-color);
+  //}
+  //
+  //.el-collapse-item__content {
+  //  background-color: var(--start-bg-color);
+  //}
+  //
+  //.el-collapse-item__header {
+  //  background-color: var(--start-bg-color);
+  //  color: var(--color-heading);
+  //}
+  //
+  .el-divider__text {
+    background-color: var(--start-bg-color);
+  }
+
+  //
+  //.el-input__wrapper {
+  //  background-color: var(--start-box-bg-color);
+  //}
+
+
+}
+
+.start-bottom-box {
+  display: flex;
+  justify-content: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .start-box {
+
+  }
+
+}
+
+
+@media (min-width: 1024px) {
+  .start-bottom-box {
+    justify-content: left;
+  }
+
+}
