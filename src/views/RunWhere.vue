@@ -27,26 +27,31 @@ function loadCheckbox(obj, skyMap) {
     return;
   }
 
-  let ignoreCodes = mapData.ignoreCodes;
+  let date = runWhere.date;
+  let availableCodes = candlelightPointCodesByName
+      .filter(code0 => {
+        return mapByName.candlelightPoints.get(code0)
+            .available(date ? LocalDate.ofDate(date) : LocalDate.now());
+      });
+
+
+  let ignoreCodes = mapData.ignoreCodes?.filter(code0 => availableCodes.includes(code0)) ?? [];
   if (!ignoreCodes || !ignoreCodes.length) {
     choose.all = true
     choose.any = false
-  }
-  if (ignoreCodes && ignoreCodes.length && ignoreCodes.length < candlelightPointCodesByName.length) {
-    choose.any = true
-    choose.all = false
+    return;
   }
 
-  let date = runWhere.date;
-  let availableCodes = candlelightPointCodesByName
-      .filter(code0 => mapByName.candlelightPoints.get(code0)
-          .available(date ? LocalDate.ofDate(date) : LocalDate.now())
-      ).length;
-  if (ignoreCodes && ignoreCodes.length &&
-      ignoreCodes.length >= availableCodes) {
-    choose.any = false
+  if (ignoreCodes && ignoreCodes.length && ignoreCodes.length < availableCodes.length) {
     choose.all = false
+    choose.any = true
+    return;
   }
+
+
+  choose.any = false
+  choose.all = false
+
 }
 
 onMounted(() => {

@@ -120,7 +120,7 @@ class CandlelightPoint {
      * @return {{candlelight:number,floatCandlelight:number|{fixed:number,float:number}}} 烛火,浮动烛火
      */
     getCandlelight(date = LocalDate.now()) {
-        if (!this.available()) {
+        if (!this.available(date)) {
             return {candlelight: 0, floatCandlelight: 0};
         }
 
@@ -130,9 +130,6 @@ class CandlelightPoint {
     }
 
     available(date = LocalDate.now()) {
-        if (!this.appearIn || !this.appearIn.length) {
-            return true;
-        }
         if (date && !this.appearIn.includes(date.getDayOfWeek())) {
             return false;
         }
