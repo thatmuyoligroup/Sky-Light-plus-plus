@@ -1,7 +1,7 @@
 {
   "name": "skylight-plus-plus",
   "version": "1.2.3-RC",
-  "private": true,
+  "private": false,
   "type": "module",
   "scripts": {
     "dev": "vite",
