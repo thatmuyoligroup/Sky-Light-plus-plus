@@ -130,7 +130,7 @@ class CandlelightPoint {
     }
 
     available(date = LocalDate.now()) {
-        if (!this.appearIn || this.appearIn.length) {
+        if (!this.appearIn || !this.appearIn.length) {
             return true;
         }
         if (date && !this.appearIn.includes(date.getDayOfWeek())) {
