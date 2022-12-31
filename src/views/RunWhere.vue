@@ -11,6 +11,39 @@ let props = defineProps({
 });
 let runWhere = props.runWhere;
 runWhere.windows = {loading: false}
+let map = null
+let imageLayer = null
+let layerGroup = L.layerGroup();
+let LayerMap = {};
+let ready = ref(false);
+let choose = reactive({
+  all: false,
+  any: false,
+})
+let groupCandlelight = ref();
+let groupData = reactive({
+  item: {}
+});
+
+onMounted(() => {
+
+})
+watch(runWhere.chooseData.maps, () => {
+  if (!runWhere.gis) {
+    return;
+  }
+
+
+  let obj = runWhere.obj;
+
+  let data = runWhere.data;
+  /**
+   * @type {SkyMap}
+   */
+  let skyMap = data.skyMap;
+
+  loadCheckbox(obj, skyMap);
+})
 
 function loadCheckbox(obj, skyMap) {
   let name = obj.name;
@@ -53,39 +86,6 @@ function loadCheckbox(obj, skyMap) {
   choose.all = false
 
 }
-
-onMounted(() => {
-
-  watch(runWhere.chooseData.maps, () => {
-    if (!runWhere.gis) {
-      return;
-    }
-
-    let obj = runWhere.obj;
-
-    let data = runWhere.data;
-    /**
-     * @type {SkyMap}
-     */
-    let skyMap = data.skyMap;
-
-    loadCheckbox(obj, skyMap);
-  })
-})
-let map = null
-let imageLayer = null
-let layerGroup = L.layerGroup();
-let LayerMap = {};
-let ready = ref(false);
-let choose = reactive({
-  all: false,
-  any: false,
-})
-let groupCandlelight = ref();
-let groupData = reactive({
-  item: {}
-});
-
 
 function load() {
 
