@@ -2,7 +2,7 @@ import locale from 'element-plus/dist/locale/zh-cn.mjs'
 
 const dataVersion = "Ver.7.0.6 (20230101121237)";
 const gameVersion = "国服 Ver.0.10.3 (207708)";
-const version = "Ver.1.2.3 (20230101171155)";
+const version = "Ver.1.2.3 (20230101185835)";
 
 const contributor = [
     '<a href="https://weibo.com/u/7360748659">游离</a>',
@@ -51,7 +51,7 @@ const noticeTemplate = {
         type: 'success',
         duration: 3000,
         dangerouslyUseHTMLString: true,
-        message: '<span style="text-align: left">新的数据库/n${version}已准备好!</span>'
+        message: '<span style="text-align: left">新的数据库<br/>${version}已准备好!</span>'
     },
     forceClear: {
         showClose: true,
