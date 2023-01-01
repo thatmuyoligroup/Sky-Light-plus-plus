@@ -86,7 +86,7 @@ const about = {
         title: "数据支持",
         desc: "计算服务使用到的各类数据",
         author: "<a href='https://m.weibo.cn/u/2630772743'>Icetric冰介</a>",
-        Version: dataVersion,
+        version: dataVersion,
         href: "https://m.weibo.cn/status/4802073034752716"
     },
     openSource: {
