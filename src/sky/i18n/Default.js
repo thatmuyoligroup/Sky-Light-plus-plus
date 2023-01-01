@@ -2,7 +2,7 @@ import locale from 'element-plus/dist/locale/zh-cn.mjs'
 
 const dataVersion = "Ver.7.0.5.207708(欧若拉季/宴会节版本)";
 const gameVersion = "国服(0.10.3)";
-const version = "V1.2.3-RC";
+const version = "V1.2.3";
 
 const contributor = [
     '<a href="https://m.weibo.cn/u/7360748659">游离</a>',
@@ -254,7 +254,7 @@ const help = {
                         `,
                     }, 
                     {
-                         title: '清除本服务的缓存',
+                         title: '清除本服务缓存',
                          type: 'itemFloat',
                          content: `如发生页面显示异常等意外情况时，<br/>
                                     可尝试连续刷新三次页面以清空本服务缓存文件，<br/>
