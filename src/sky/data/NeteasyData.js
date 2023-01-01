@@ -2232,7 +2232,7 @@ export default {
                     "type": "button"
                 },
                 "input": true,
-                "inputPlaceholder": "优质水母(只)"
+                "inputPlaceholder": "烛火水母(只)"
             }
         }
     ],
