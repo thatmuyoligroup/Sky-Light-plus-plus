@@ -92,14 +92,14 @@ const about = {
     openSource: {
         title: '关于',
         html: '这是一个开源项目<a href="https://github.com/thatmuyoligroup/Sky-Light-plus-plus" rel="noopener" target="_blank">SkyLight++</a>不存在任何盈利行为，为爱发电<br/>',
-        url: "https://github.com/thatmuyoligroup/Sky-Light-plus-plus",
+        url: "https://gitee.com/thatmuyoligroup/Sky-Light-plus-plus",
     },
     form: {
         title: '让光成为向导',
         html: '从冒险季节、游戏内活动到不断扩大的友谊世界和待解锁的收藏品，Sky中有很多事情要做。通过帮助他人将坠落的光芒恢复到星座。王国入门介绍在这里\n' +
             '<a href="https://sky.163.com/">游戏官网</a>'
     },
-    author: ["<a href='https://github.com/thatmuyoligroup'>Muyoli 团队</a>"],
+    author: ["<a href='https://gitee.com/thatmuyoligroup'>Muyoli 团队</a>"],
     contributor: contributor,
     gameVersionTitle: '游戏版本: ',
     gameVersion: gameVersion,
