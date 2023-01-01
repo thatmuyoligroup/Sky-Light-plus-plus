@@ -5,7 +5,7 @@ const gameVersion = "国服 v0.10.3";
 const version = "V1.2.3 (2023010120500)";
 
 const contributor = [
-    '<a href="https://weibo.cn/u/7360748659">游离</a>',
+    '<a href="https://weibo.com/u/7360748659">游离</a>',
     '<a href="https://weibo.com/u/5685423899">包包</a>',
     '<a href="https://v.kuaishou.com/Ejc9ZN">氢腥</a>',
     '<a href="https://www.gitee.com/jianjianghui" >江晖</a>',
