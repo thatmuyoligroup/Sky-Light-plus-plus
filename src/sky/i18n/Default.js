@@ -75,6 +75,7 @@ const about = {
     authorTitle: '作者: ',
     authorSeparator: '&nbsp;&nbsp;&nbsp;',
     versionTitle: '程序版本: ',
+    dataVersionTitle: '数据版本: ',
     dailyTasks: {
         title: '每日任务',
         url: 'https://m.weibo.cn/u/7360748659',
@@ -86,7 +87,7 @@ const about = {
         title: "数据支持",
         desc: "计算服务使用到的各类数据",
         author: "<a href='https://m.weibo.cn/u/2630772743'>Icetric冰介</a>",
-        version: dataVersion,
+        dataVersion: dataVersion,
         href: "https://m.weibo.cn/status/4802073034752716"
     },
     openSource: {
