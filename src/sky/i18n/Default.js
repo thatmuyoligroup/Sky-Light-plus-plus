@@ -29,7 +29,7 @@ const noticeTemplate = {
         title: '注意',
         type: 'warning',
         duration: 0,
-        message: '目前已选择活动烛火，请确认所选天数仍在活动范围内!'
+        message: '目前已选择活动烛火，请确认所选天数仍在活动时间范围内!'
     },
     error: {
         showClose: false,
