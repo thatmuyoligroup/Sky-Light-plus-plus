@@ -75,7 +75,6 @@ const about = {
     authorTitle: '作者: ',
     authorSeparator: '&nbsp;&nbsp;&nbsp;',
     versionTitle: '程序版本: ',
-    dataVersionTitle: '数据版本: ',
     dailyTasks: {
         title: '每日任务',
         url: 'https://m.weibo.cn/u/7360748659',
