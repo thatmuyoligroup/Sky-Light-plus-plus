@@ -74,7 +74,6 @@ const messageTemplate = {
 const about = {
     authorTitle: '作者: ',
     authorSeparator: '&nbsp;&nbsp;&nbsp;',
-    versionTitle: '程序版本: ',
     dailyTasks: {
         title: '每日任务',
         url: 'https://m.weibo.cn/u/7360748659',
@@ -86,6 +85,7 @@ const about = {
         title: "数据支持",
         desc: "计算服务使用到的各类数据",
         author: "<a href='https://m.weibo.cn/u/2630772743'>Icetric冰介</a>",
+        versionTitle: "数据版本: ",
         version: dataVersion,
         href: "https://m.weibo.cn/status/4802073034752716"
     },
@@ -103,6 +103,7 @@ const about = {
     contributor: contributor,
     gameVersionTitle: '游戏版本: ',
     gameVersion: gameVersion,
+    versionTitle: '程序版本: ',
     version: version
 }
 const start = {
@@ -252,11 +253,11 @@ const help = {
                         content: `当想要查看他人共享或已保存的方案时，可点击下底部导入按钮，<br/>
                         粘贴方案代码至文本框，点击确认，导入成功后自动计算本方案的分析结果。
                         `,
-                    }, 
+                    },
                     {
-                         title: '清除本服务缓存',
-                         type: 'itemFloat',
-                         content: `如发生页面显示异常等意外情况时，<br/>
+                        title: '清除本服务缓存',
+                        type: 'itemFloat',
+                        content: `如发生页面显示异常等意外情况时，<br/>
                                     可尝试连续刷新三次页面以清空本服务缓存文件，<br/>
                                     缓存清除后，将自动获取最新版本及数据文件。
                                     `,
@@ -270,7 +271,7 @@ const help = {
             type: 'itemFloat',
             content: `<img style="width: 100%" alt="无法加载" src="https://sky-res.muyoli.com/images/烛火统计.jpg"/>`,
         },
-        
+
     ]
 }
 

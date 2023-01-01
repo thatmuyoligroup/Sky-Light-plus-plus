@@ -33,7 +33,7 @@ let about = Data.about
     {{ about.authorTitle }}
     <span v-html="about.dataSupport.author"></span>
     <div></div>
-    {{ about.versionTitle }}
+    {{ about.dataSupport.versionTitle }}
     {{ about.dataSupport.version }}
   </WelcomeItem>
 
