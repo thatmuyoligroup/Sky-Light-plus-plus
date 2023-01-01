@@ -9287,12 +9287,12 @@ export default {
         "飞行赛道": {
             "type": "un_support",
             "title": "提示",
-            "content": "${name}跑完给一根蜡烛，无需单独选择烛火点"
+            "content": "${name}可获得一根蜡烛，无需单独选择烛火点"
         },
         "滑雪赛道": {
             "type": "un_support",
             "title": "提示",
-            "content": "${name}跑完给一根蜡烛，无需单独选择烛火点"
+            "content": "${name}可获得一根蜡烛，无需单独选择烛火点"
         },
         "落日竞技场": {
             "img": "https://sky-res.muyoli.com/images/maps/霞谷/small/终点.jpg",
