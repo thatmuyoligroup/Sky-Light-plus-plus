@@ -72,7 +72,7 @@ const messageTemplate = {
 };
 
 const about = {
-    authorTitle: '项目作者: ',
+    authorTitle: '作者: ',
     authorSeparator: '&nbsp;&nbsp;&nbsp;',
     versionTitle: '版本: ',
     dailyTasks: {
