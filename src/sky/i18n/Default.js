@@ -235,7 +235,7 @@ const help = {
                         `,
                 }],
             }, {
-                title: '分享结果',
+                title: '分享结果及缓存清除',
                 type: 'menu',
                 icon: 'share',
                 item: [
@@ -252,6 +252,14 @@ const help = {
                         content: `当想要查看他人共享或已保存的方案时，可点击下底部导入按钮，<br/>
                         粘贴方案代码至文本框，点击确认，导入成功后自动计算本方案的分析结果。
                         `,
+                    }, 
+                    {
+                         title: '清除本服务的缓存',
+                         type: 'itemFloat',
+                         content: `如发生页面显示异常等意外情况时，<br/>
+                                    可尝试连续刷新三次页面以清空本服务的缓存文件，<br/>
+                                    缓存清除后，将自动获取最新版本及数据文件。
+                                    `,
                     }
                 ],
             }],
@@ -262,6 +270,7 @@ const help = {
             type: 'itemFloat',
             content: `<img style="width: 100%" alt="无法加载" src="https://sky-res.muyoli.com/images/烛火统计.jpg"/>`,
         },
+        
     ]
 }
 
