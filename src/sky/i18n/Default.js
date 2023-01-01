@@ -72,7 +72,7 @@ const messageTemplate = {
 };
 
 const about = {
-    authorTitle: '作者: ',
+    authorTitle: '项目作者: ',
     authorSeparator: '&nbsp;&nbsp;&nbsp;',
     versionTitle: '版本: ',
     dailyTasks: {
@@ -92,7 +92,7 @@ const about = {
     openSource: {
         title: '关于',
         html: '这是一个开源项目<a href="https://github.com/thatmuyoligroup/Sky-Light-plus-plus" rel="noopener" target="_blank">SkyLight++</a>不存在任何盈利行为，为爱发电<br/>',
-        url: "https://www.gitee.com/jianjianghui/sky-runaway",
+        url: "https://github.com/thatmuyoligroup/Sky-Light-plus-plus",
     },
     form: {
         title: '让光成为向导',
