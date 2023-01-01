@@ -74,7 +74,7 @@ const messageTemplate = {
 const about = {
     authorTitle: '作者: ',
     authorSeparator: '&nbsp;&nbsp;&nbsp;',
-    versionTitle: '版本: ',
+    versionTitle: '程序版本: ',
     dailyTasks: {
         title: '每日任务',
         url: 'https://m.weibo.cn/u/7360748659',
