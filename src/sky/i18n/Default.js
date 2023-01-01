@@ -28,7 +28,7 @@ const noticeTemplate = {
         title: '注意',
         type: 'warning',
         duration: 0,
-        message: '目前已选择活动烛火，请确认天数仍在活动范围内!'
+        message: '目前已选择活动烛火，请确认所选天数仍在活动范围内!'
     },
     error: {
         showClose: false,
@@ -62,12 +62,12 @@ const noticeTemplate = {
         showClose: true,
         title: '注意',
         type: 'warning',
-        message: '无法获取服务器数据，已使用本地数据！'
+        message: '无法获取服务器数据，将使用本地数据！'
     }
 };
 const messageTemplate = {
     keepEyeSafe: {message: '要保护好眼睛哦！'},
-    calculating: {message: '正在计算中...', type: 'warning', duration: 0},
+    calculating: {message: '正在计算分析中...', type: 'warning', duration: 0},
     loadingGameData: {message: '正在加载数据中...', type: 'info', duration: 0},
 };
 
@@ -78,8 +78,8 @@ const about = {
     dailyTasks: {
         title: '每日任务',
         url: 'https://m.weibo.cn/u/7360748659',
-        html: '<a href="https://m.weibo.cn/u/7360748659" target="_blank">立即前往</a>',
-        desc: '包含季节大蜡烛位置、每日任务详解、每日大蜡烛点、落石点、日程提醒、活动日历',
+        html: '<a href="https://m.weibo.cn/u/7360748659" target="_blank">立即前往微博</a>',
+        desc: '查看季节蜡烛及本日大蜡烛位置、每日任务详解、本日大蜡烛点、黑暗降临落石点、日程提醒、活动日历攻略',
         author: '<a href="https://m.weibo.cn/u/7360748659">今天游离翻车了吗</a>'
     },
     dataSupport: {
@@ -96,7 +96,7 @@ const about = {
     },
     form: {
         title: '让光成为向导',
-        html: '从冒险季节、游戏内活动到不断扩大的友谊世界和待解锁的收藏品，Sky 中有很多事情要做。通过帮助他人将坠落的光芒恢复到星座。王国入门介绍在这里\n' +
+        html: '从冒险季节、游戏内活动到不断扩大的友谊世界和待解锁的收藏品，Sky中有很多事情要做。通过帮助他人将坠落的光芒恢复到星座。王国入门介绍在这里\n' +
             '<a href="https://sky.163.com/">游戏官网</a>'
     },
     author: ["<a href='https://github.com/thatmuyoligroup'>Muyoli 团队</a>"],
@@ -112,7 +112,7 @@ const start = {
         point: '烛火收获点',
         activity: '活动烛火',
     },
-    datePlaceholder: "指定计算日期(为空计算当日）",
+    datePlaceholder: "指定计算日期(为空时默认选择当日）",
     resultTitle: {
         overview: {
             title: '总览',
@@ -140,16 +140,16 @@ const start = {
             clear: '清空',
             export: {
                 title: '导出',
-                success: '已将内容复制到剪贴板!',
-                fail: '内容无法复制到剪贴板!',
+                success: '方案代码已复制至剪贴板，快去保存分享吧！',
+                fail: '复制方案代码发生错误，请重试！',
             },
             import: {
                 title: '导入',
                 boxTitle: '导入方案',
-                placeholder: '请输入复制的方案',
+                placeholder: '请粘贴已保存的方案',
                 confirm: '确认',
                 error: '无法识别方案',
-                success: '导入方案成功',
+                success: '方案导入成功',
             },
         }
     },
@@ -167,7 +167,7 @@ const help = {
     defaultActive: "2",
     contributor: {
         title: "贡献者",
-        notRanked: "以下排名不分先后！"
+        notRanked: "以下排名不分先后"
     },
     copyright: {title: "版权声明"},
     howToUse: [
