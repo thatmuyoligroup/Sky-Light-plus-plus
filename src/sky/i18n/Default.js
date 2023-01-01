@@ -49,7 +49,7 @@ const noticeTemplate = {
         title: '成功',
         type: 'success',
         duration: 3000,
-        message: '新的数据版本${version}已准备好!'
+        message: '新的数据库${version}已准备好!'
     },
     forceClear: {
         showClose: true,
@@ -62,7 +62,7 @@ const noticeTemplate = {
         showClose: true,
         title: '注意',
         type: 'warning',
-        message: '无法获取服务器数据，将使用本地数据！'
+        message: '无法获取服务器数据，将使用已缓存的本地数据库文件！'
     }
 };
 const messageTemplate = {
@@ -184,26 +184,26 @@ const help = {
                         title: '地图烛火点',
                         type: 'itemFloat',
                         content: `点击"地图烛火点"展开所有地图,<br/>
-                                    点击地图左侧复选框可全选本图所有烛火点，再次点击取消全选。<br/>
-                                    点击地图展开本地图中所有烛火小图，双击任意烛火小图按钮可选择小图所有烛火，再次双击小图取消选择,<br/>
-                                    单击烛火小图可选择具体烛火点。<br/>
+                                    点击地图左侧复选框可全选本图所有烛火点，再次点击以取消全选。<br/>
+                                    点击地图展开本图中的所有小地图，双击小地图名称可选择地图中所有烛火，再次双击小地图名称以取消选择,<br/>
+                                    单击小地图名称可选择具体烛火点。<br/>
                         `,
                     },
                     {
                         title: '特别烛火',
                         type: 'itemFloat',
-                        content: `点击即可选择，再次点击取消选择,<br/>部分烛火点可手动选择收集数量。
+                        content: `点击即可选择，再次点击以取消选择,<br/>部分烛火点可手动选择收集数量。
                         `,
                     },
                     {
                         title: '烛火收获点',
                         type: 'itemFloat',
-                        content: `点击即可选择，再次点击取消选择。<br/>`,
+                        content: `点击即可选择，再次点击以取消选择。<br/>`,
                     },
                     {
                         title: '活动烛火',
                         type: 'itemFloat',
-                        content: `有活动的时候本项才会展示,<br/>点击即可选择，再次点击取消选择.<br/>`,
+                        content: `本项仅在活动期间显示,<br/>点击即可选择，再次点击以取消选择.<br/>`,
                     }
                 ]
             }, {
