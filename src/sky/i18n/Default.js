@@ -43,14 +43,14 @@ const noticeTemplate = {
         title: '成功',
         type: 'success',
         duration: 3000,
-        message: '新版本<br/>${version}已准备好!'
+        message: '新版本/n${version}已准备好!'
     },
     newGameDataVersion: {
         showClose: true,
         title: '成功',
         type: 'success',
         duration: 3000,
-        message: '新的数据库<br/>${version}已准备好!'
+        message: '新的数据库/n${version}已准备好!'
     },
     forceClear: {
         showClose: true,
