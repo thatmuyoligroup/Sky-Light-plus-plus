@@ -36,21 +36,21 @@ const noticeTemplate = {
         title: '错误',
         type: 'error',
         duration: 3000,
-        message: '发生错误， 请刷新页面！'
+        message: '发生错误，请刷新页面！'
     },
     newVersion: {
         showClose: true,
         title: '成功',
         type: 'success',
         duration: 3000,
-        message: '新版本/n${version}已准备好!'
+        message: '新版本${version}已准备好!'
     },
     newGameDataVersion: {
         showClose: true,
         title: '成功',
         type: 'success',
         duration: 3000,
-        message: '新的数据库/n${version}已准备好!'
+        message: '新的数据库${version}已准备好!'
     },
     forceClear: {
         showClose: true,
