@@ -2,7 +2,7 @@ import locale from 'element-plus/dist/locale/zh-cn.mjs'
 
 const dataVersion = "Ver.7.0.5.207708";
 const gameVersion = "国服 v0.10.3";
-const version = "V1.2.3 (20230101113248)";
+const version = "V1.2.3 (2023010120500)";
 
 const contributor = [
     '<a href="https://m.weibo.cn/u/7360748659">游离</a>',
@@ -291,7 +291,7 @@ export default {
     messageTemplate: messageTemplate,
     copyright: `
         本项目为开源项目，所使用的任何代码、工具不隶属于thatgamecompany及其附属公司，也不受其赞助或<span style="white-space:nowrap; ">授权。</span><br/>
-        本项目中所使用的地图名称及游戏截图中的建模<span style="white-space:nowrap; ">版权所属thatgamecompany。</span><a href="https://m.weibo.cn/u/6073956879">@Muyoli_木有里</a>
+        本项目中所使用的地图名称及游戏截图中的建模<span style="white-space:nowrap; ">版权所属thatgamecompany。</span><br/><a href="https://m.weibo.cn/u/6073956879">@Muyoli_木有里</a>
      
     `,
 
