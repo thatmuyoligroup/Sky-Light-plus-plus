@@ -7985,12 +7985,12 @@ export default {
         "音乐大厅": {
             "type": "un_support",
             "title": "提示",
-            "content": "${name}只有${size}个烛火点共${candlelight}烛火。可在特别烛火中继续选择音谱挑战"
+            "content": "${name}只有${size}个烛火点共${candlelight}烛火。可在特别烛火中继续选择“音谱挑战”项目"
         },
         "雪隐峰": {
             "type": "un_support",
             "title": "提示",
-            "content": "${name}只有${size}一个大蜡烛烛火点。可在特别烛火中继续选择雪人竞速"
+            "content": "${name}只有${size}个大蜡烛烛火点。可在特别烛火中继续选择“雪人竞速”项目"
         },
         "冰道": {
             "img": "https://sky-res.muyoli.com/images/maps/霞谷/small/冰道.jpg",
