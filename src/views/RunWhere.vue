@@ -306,7 +306,7 @@ function handleCheckAllChange(change) {
   } else {
     mapData.ignoreCodes = [...candlelightPointCodesByName];
   }
-
+  loadCheckboxByRunWhere();
   layerGroup.clearLayers()
   LayerMap = {};
   let mapByName = skyMap.getMapByName(obj.name);
@@ -390,6 +390,8 @@ function close() {
                 size="large"
                 style="margin-left: 22px;margin-top: 2px;transform: scale(1.8);"
                 @change="handleCheckAllChange"
+                @click.stop="()=>{}"
+                @dblclick.stop="()=>{}"
             >{{ '' }}
             </el-checkbox>
           </div>
