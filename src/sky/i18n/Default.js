@@ -13,7 +13,7 @@ const contributor = [
     '<a href="https://weibo.com/u/2630772743">冰介</a>',
     '<a href="https://weibo.com/u/5861905692">雨季</a>',
     '<a href="https://v.kuaishou.com/ESzeL1">海天</a>',
-    '阿圤',
+    '<a href="https://v.douyin.com/kJP95dP">阿圤</a>',
 ];
 
 const noticeTemplate = {
@@ -50,7 +50,8 @@ const noticeTemplate = {
         title: '成功',
         type: 'success',
         duration: 3000,
-        message: '新的数据库${version}已准备好!'
+        dangerouslyUseHTMLString: true,
+        message: '<span style="text-align: left">新的数据库${version}已准备好!</span>'
     },
     forceClear: {
         showClose: true,
