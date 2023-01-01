@@ -51,7 +51,7 @@ const noticeTemplate = {
         type: 'success',
         duration: 3000,
         dangerouslyUseHTMLString: true,
-        message: '<span style="text-align: left">新的数据库${version}已准备好!</span>'
+        message: '<span style="text-align: left">新的数据库/n${version}已准备好!</span>'
     },
     forceClear: {
         showClose: true,
@@ -86,7 +86,7 @@ const about = {
     dataSupport: {
         title: "数据支持",
         desc: "计算服务使用到的各类数据",
-        author: "<a href='https://weibo.comn/u/2630772743'>Icetric冰介</a>",
+        author: "<a href='https://weibo.com/u/2630772743'>Icetric冰介</a>",
         versionTitle: "数据版本: ",
         version: dataVersion,
         href: "https://weibo.com/status/4802073034752716"
