@@ -1,5 +1,5 @@
 export default {
-    "version": "Ver.7.0.6 (20230101121237)",
+    "version": "Ver.7.0.6 (20230101185835)",
     "candlelightType": {
         "普通蜡烛": 1,
         "普通黑暗植物": 2,
