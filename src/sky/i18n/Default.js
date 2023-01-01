@@ -2,7 +2,7 @@ import locale from 'element-plus/dist/locale/zh-cn.mjs'
 
 const dataVersion = "Ver.7.0.5.207708";
 const gameVersion = "国服 v0.10.3";
-const version = "V1.2.3 (2023010120500)";
+const version = "V1.2.3 (2023010121005)";
 
 const contributor = [
     '<a href="https://weibo.com/u/7360748659">游离</a>',
@@ -10,8 +10,8 @@ const contributor = [
     '<a href="https://v.kuaishou.com/Ejc9ZN">氢腥</a>',
     '<a href="https://www.gitee.com/jianjianghui" >江晖</a>',
     '松奈',
-    '<a href="https://weibo.cn/u/2630772743">冰介</a>',
-    '<a href="https://weibo.cn/u/5861905692">雨季</a>',
+    '<a href="https://weibo.com/u/2630772743">冰介</a>',
+    '<a href="https://weibo.com/u/5861905692">雨季</a>',
     '<a href="https://v.kuaishou.com/ESzeL1">海天</a>',
     '阿圤',
 ];
@@ -291,7 +291,7 @@ export default {
     messageTemplate: messageTemplate,
     copyright: `
         本项目为开源项目，所使用的任何代码、工具不隶属于thatgamecompany及其附属公司，也不受其赞助或<span style="white-space:nowrap; ">授权。</span><br/>
-        本项目中所使用的地图名称及游戏截图中的建模<span style="white-space:nowrap; ">版权所属thatgamecompany。</span><br/><a href="https://weibo.cn/u/6073956879">@Muyoli_木有里</a>
+        本项目中所使用的地图名称及游戏截图中的建模<span style="white-space:nowrap; ">版权所属thatgamecompany。</span><br/><a href="https://weibo.com/u/6073956879">@Muyoli_木有里</a>
      
     `,
 
