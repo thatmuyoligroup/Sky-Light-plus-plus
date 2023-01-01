@@ -78,17 +78,17 @@ const about = {
     dailyTasks: {
         title: '每日任务',
         url: 'https://m.weibo.cn/u/7360748659',
-        html: '<a href="https://m.weibo.cn/u/7360748659" target="_blank">立即前往微博</a>',
-        desc: '查看季节蜡烛及本日大蜡烛位置、每日任务详解、本日大蜡烛点、黑暗降临落石点、日程提醒、活动日历攻略',
-        author: '<a href="https://m.weibo.cn/u/7360748659">今天游离翻车了吗</a>'
+        html: '<a href="https://weibo.com/u/7360748659" target="_blank">立即前往微博</a>',
+        desc: '查看每日日大蜡烛及季节蜡烛位置、每日任务详解、黑暗降临落石点、日程提醒、活动日历攻略',
+        author: '<a href="https://weibo.com/u/7360748659">今天游离翻车了吗</a>'
     },
     dataSupport: {
         title: "数据支持",
         desc: "计算服务使用到的各类数据",
-        author: "<a href='https://m.weibo.cn/u/2630772743'>Icetric冰介</a>",
+        author: "<a href='https://weibo.comn/u/2630772743'>Icetric冰介</a>",
         versionTitle: "数据版本: ",
         version: dataVersion,
-        href: "https://m.weibo.cn/status/4802073034752716"
+        href: "https://weibo.com/status/4802073034752716"
     },
     openSource: {
         title: '关于',
@@ -221,6 +221,7 @@ const help = {
                     title: '烛火收取进度',
                     type: 'itemFloat',
                     content: `当选择烛火点后，会进行自动计算，下滑至底部以查看本次所选择的烛火详情。<br/>
+                              未收取烛火不计算特殊烛火及活动烛火。
                         `,
                 }, {
                     title: '预测',
