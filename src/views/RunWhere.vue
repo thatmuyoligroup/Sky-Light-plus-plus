@@ -26,24 +26,20 @@ let groupData = reactive({
 });
 
 onMounted(() => {
-
 })
-watch(runWhere.chooseData.maps, () => {
-  if (!runWhere.gis) {
-    return;
-  }
 
+/**
+ * @deprecated
+ */
+function watchMapData() {
+  watch(runWhere.chooseData.maps, () => {
+    if (!runWhere.gis) {
+      return;
+    }
 
-  let obj = runWhere.obj;
-
-  let data = runWhere.data;
-  /**
-   * @type {SkyMap}
-   */
-  let skyMap = data.skyMap;
-
-  loadCheckbox(obj, skyMap);
-})
+    loadCheckboxByRunWhere();
+  })
+}
 
 function loadCheckbox(obj, skyMap) {
   let name = obj.name;
@@ -178,9 +174,9 @@ function load() {
       //加载地图数据
       if (!chooseData.maps[obj.name]) {
         chooseData.maps[obj.name] = {name: obj.name}
-      } else {
-        loadCheckbox(runWhere.obj, runWhere.data.skyMap);
       }
+      loadCheckboxByRunWhere();
+
       // 加载地图点数据
       let mapByName = skyMap.getMapByName(obj.name);
       let candlelightPoints = mapByName.candlelightPoints;
@@ -248,8 +244,20 @@ function createGreed(geoJSON) {
     let layer0 = createWhite(geoJSON)
     LayerMap[code1] = {code: code1, layer: layer0};
     layerGroup.addLayer(layer0)
+    loadCheckboxByRunWhere();
   })
 
+}
+
+function loadCheckboxByRunWhere() {
+  let obj = runWhere.obj;
+  let data = runWhere.data;
+  /**
+   * @type {SkyMap}
+   */
+  let skyMap = data.skyMap;
+
+  loadCheckbox(obj, skyMap);
 }
 
 function createWhite(geoJSON) {
@@ -272,6 +280,7 @@ function createWhite(geoJSON) {
     let layer0 = createGreed(geoJSON)
     LayerMap[code1] = {code: code1, layer: layer0};
     layerGroup.addLayer(layer0)
+    loadCheckboxByRunWhere();
   })
 
 }
