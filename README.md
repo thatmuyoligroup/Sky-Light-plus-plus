@@ -1,5 +1,6 @@
 # SkyLight++
-[![Netlify Status](https://api.netlify.com/api/v1/badges/47a755ce-b94e-4697-b0c8-f2c37bd19cc7/deploy-status)](https://app.netlify.com/sites/boisterous-licorice-bc4a56/deploys)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/47a755ce-b94e-4697-b0c8-f2c37bd19cc7/deploy-status)](https://slplus.muyoli.com)
 
 ## Recommended IDE Setup
 
