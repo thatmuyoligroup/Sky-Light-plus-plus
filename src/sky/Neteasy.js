@@ -56,6 +56,7 @@ async function loadServerData() {
 }
 
 async function loadData() {
+    let lastUseLocalGameData = stores['main'].useLocalGameData;
     while (true) {
         let result = await loadServerData();
         if (result.code === 403) {
@@ -66,16 +67,26 @@ async function loadData() {
             delete dataResp.default.version;
             chinaData = dataResp.default;
             mapViewData = mapViewDataResp.default;
+            stores['main'].useLocalGameData = true
             break;
         }
         if (result.code === 200) {
+            stores['main'].useLocalGameData = false
             break;
         }
     }
     // 数据版本更细策略
     {
         if (chinaData.version && chinaData.version !== stores['main'].gameDataVersion) {
-            stores['main'].clear()
+            //stores['main'].clear()
+            stores['main'].gameDataVersion = chinaData.version
+            ElSystemNotice.sendNotice(Data.noticeTemplate.newGameDataVersion, {version: chinaData.version});
+        }
+    }
+
+    // 本地数据替换到服务器数据
+    {
+        if (lastUseLocalGameData && !stores['main'].useLocalGameData) {
             stores['main'].gameDataVersion = chinaData.version
             ElSystemNotice.sendNotice(Data.noticeTemplate.newGameDataVersion, {version: chinaData.version});
         }

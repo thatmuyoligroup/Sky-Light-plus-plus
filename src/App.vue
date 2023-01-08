@@ -2,7 +2,7 @@
 import {RouterView, useRoute, useRouter} from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import {loyalCustomerStore, useMainStore} from "./stores/stores";
-import {nextTick, onMounted, ref, toRefs} from "vue";
+import {nextTick, onMounted, ref, watch} from "vue";
 import ElSystemNotice from "./util/ElSystemNotice";
 import Data from "./sky/i18n/Default.js";
 
@@ -11,7 +11,7 @@ let loyalCustomer = loyalCustomerStore();
 let router = useRouter()
 let route = useRoute();
 let navDivider = ref(false)
-let isDark = toRefs(main).isDark;
+let isDark = ref(false)
 
 function to(path) {
   if (route.path === path) {
@@ -101,6 +101,10 @@ function reload() {
   document.getElementsByClassName('replay')[0].className += ' replaying'
   setTimeout(() => location.reload(), 200)
 }
+
+watch(isDark, () => {
+  main.isDark = isDark.value;
+})
 
 onMounted(() => {
   ElSystemNotice.load();

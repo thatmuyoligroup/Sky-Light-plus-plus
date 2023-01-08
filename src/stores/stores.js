@@ -13,6 +13,7 @@ const useMainStore = function () {
         let pageLoading = ref(false)
         let chooseData = ref(null)
         let isDark = ref(false)
+        let useLocalGameData = ref(false)
         let gameDataVersion = ref(null)
         let hasError = ref(false)
         let loadDate = ref([]);
@@ -55,6 +56,7 @@ const useMainStore = function () {
 
         return {
             isDark,
+            useLocalGameData,
             pageLoading,
             chooseData,
             gameDataVersion,
