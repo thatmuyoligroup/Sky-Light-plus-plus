@@ -2,7 +2,7 @@
 import {RouterView, useRoute, useRouter} from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import {loyalCustomerStore, useMainStore} from "./stores/stores";
-import {nextTick, onMounted, ref} from "vue";
+import {nextTick, onMounted, ref, toRefs} from "vue";
 import ElSystemNotice from "./util/ElSystemNotice";
 import Data from "./sky/i18n/Default.js";
 
@@ -11,8 +11,7 @@ let loyalCustomer = loyalCustomerStore();
 let router = useRouter()
 let route = useRoute();
 let navDivider = ref(false)
-let isDark = ref(false)
-let isIOSLoyalCustomer = ref(false)
+let isDark = toRefs(main).isDark;
 
 function to(path) {
   if (route.path === path) {
@@ -76,17 +75,16 @@ function loadMediaWidthSetting() {
 
 function loadLoyalCustomer() {
   function isRunningStandalone() {
+    loyalCustomer.isLoyalCustomer = false
     return (window.matchMedia('(display-mode: standalone)').matches);
   }
 
   if (!navigator.standalone && !isRunningStandalone()) {
+    loyalCustomer.isLoyalCustomer = false
     return;
   }
 
   loyalCustomer.isLoyalCustomer = true
-  if (navigator.standalone) {
-    isIOSLoyalCustomer.value = true
-  }
 
   if (loyalCustomer.informed) {
     return;
@@ -120,7 +118,7 @@ onMounted(() => {
     <img v-else alt="logo" class="logo" height="90" src="@/assets/logo.png" width="180"/>
     <div class="wrapper">
       <HelloWorld :msg="Data.title">
-        <template v-if="isIOSLoyalCustomer" #title>
+        <template v-if="loyalCustomer.isLoyalCustomer" #title>
           <van-icon class="replay" name="replay"
                     @click="reload()"/>
         </template>

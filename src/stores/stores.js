@@ -10,14 +10,15 @@ const useMainStore = function () {
     }
 
     let storeDefinition = defineStore('main', () => {
-        const pageLoading = ref(false)
-        const chooseData = ref(null)
-        const gameDataVersion = ref(null)
-        const hasError = ref(false)
-        const loadDate = ref([]);
-        const notificationQueue = ref([]);
-        const messageQueue = ref([]);
-        const version = ref(Data.about.version)
+        let pageLoading = ref(false)
+        let chooseData = ref(null)
+        let isDark = ref(false)
+        let gameDataVersion = ref(null)
+        let hasError = ref(false)
+        let loadDate = ref([]);
+        let notificationQueue = ref([]);
+        let messageQueue = ref([]);
+        let version = ref(Data.about.version)
         const predictParam = reactive({
             candle: 0,
             nextProgress: 0,
@@ -53,6 +54,7 @@ const useMainStore = function () {
         }
 
         return {
+            isDark,
             pageLoading,
             chooseData,
             gameDataVersion,

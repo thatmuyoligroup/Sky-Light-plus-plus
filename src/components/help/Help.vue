@@ -4,6 +4,7 @@ import HelpMenu from "./HelpMenu.vue";
 import HelpItemFloat from "./HelpItemFloat.vue";
 import HelpItem from "./HelpItem.vue";
 
+
 export default {
   name: "help",
   components: {HelpMenu, HelpItemFloat, HelpItem},
@@ -18,6 +19,11 @@ export default {
 <script setup>
 import {showImagePreview} from "vant";
 import device from "current-device";
+import {useMainStore} from "../../stores/stores";
+import {toRefs} from "vue";
+
+
+const main = useMainStore()
 
 </script>
 
@@ -34,14 +40,14 @@ import device from "current-device";
                      :index="prefix? ''+prefix+(index+1) : ''+(index+1)"
                      :title="obj.title">
       <component
-          :is="{template: obj.content,methods:{showImagePreview,isMobile:device.mobile,isTablet:device.tablet,isDesktop:device.desktop}}"/>
+          :is="{data:()=>{return {isDark:toRefs(main).isDark}},template: obj.content,methods:{showImagePreview,isMobile:device.mobile,isTablet:device.tablet,isDesktop:device.desktop}}"/>
 
     </help-item-float>
 
     <help-item v-else-if="obj.type==='item'" :icon="obj.icon" :index="prefix?''+prefix+(index+1):''+(index+1)"
                :title="obj.title">
       <component
-          :is="{template: obj.content,methods:{showImagePreview,isMobile:device.mobile,isTablet:device.tablet,isDesktop:device.desktop}}"/>
+          :is="{data:()=>{return {isDark:toRefs(main).isDark}},template: obj.content,methods:{showImagePreview,isMobile:device.mobile,isTablet:device.tablet,isDesktop:device.desktop}}"/>
     </help-item>
   </template>
 </template>

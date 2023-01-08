@@ -2,7 +2,7 @@ import locale from 'element-plus/dist/locale/zh-cn.mjs'
 
 const dataVersion = "Ver.7.0.6 (20230107124030)";
 const gameVersion = "国服 Ver.0.10.3 (207708)";
-const version = "Ver.1.3.3 (20230107165930)";
+const version = "Ver.1.3.4 (20230108210503)";
 
 const contributor = [
     '<a href="https://weibo.com/u/7360748659">游离</a>',
@@ -323,8 +323,15 @@ const help = {
             icon: 'box',
             type: 'itemFloat',
             content: `
+                       <template v-if="isDark">
+                       <img v-if="isMobile() || isTablet()" style="width: 100%" alt="无法加载" src="https://sky-res.muyoli.com/images/烛火统计-dark.jpg" @click="showImagePreview({images: ['https://sky-res.muyoli.com/images/烛火统计-dark.jpg'],closeable: true})"/>
+                        <el-image v-else style="width: 100%" alt="无法加载" src="https://sky-res.muyoli.com/images/烛火统计-dark.jpg"  :preview-src-list="['https://sky-res.muyoli.com/images/烛火统计-dark.jpg']" />
+                        </template>
+                        <template v-else>
                         <img v-if="isMobile() || isTablet()" style="width: 100%" alt="无法加载" src="https://sky-res.muyoli.com/images/烛火统计.jpg" @click="showImagePreview({images: ['https://sky-res.muyoli.com/images/烛火统计.jpg'],closeable: true})"/>
                         <el-image v-else style="width: 100%" alt="无法加载" src="https://sky-res.muyoli.com/images/烛火统计.jpg"  :preview-src-list="['https://sky-res.muyoli.com/images/烛火统计.jpg']" />
+                        </template>
+                        
             `,
         },
 
