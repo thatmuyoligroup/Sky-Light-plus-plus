@@ -9,7 +9,9 @@ import Data from '../sky/i18n/Default'</script>
 
 <template>
   <div class="greetings">
-    <h1 class="sky">{{ msg }}</h1>
+    <h1 class="sky">{{ msg }}
+      <slot name="title"/>
+    </h1>
     <h3 v-html=" Data.welcome">
     </h3>
     <h6 class="copyright">

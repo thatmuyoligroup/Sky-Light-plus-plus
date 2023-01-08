@@ -28,7 +28,7 @@ function testAll() {
 function testAvailable() {
     let testValue = []
     let actual = activity.getAvailableActivityNames(LocalDate.of(2022, 12, 23))
-    let expected = ['宴会节篝火'];
+    let expected = [];
     return {
         name: '【可用活动烛火】',
         pass: equals(actual, expected),

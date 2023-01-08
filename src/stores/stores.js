@@ -1,10 +1,14 @@
-import {ref} from 'vue'
+import {reactive, ref} from 'vue'
 import {defineStore} from 'pinia'
 import Data from "../sky/i18n/Default.js";
 import StringUtils from "../util/StringUtils.js";
 import ElSystemNotice from "../util/ElSystemNotice.js";
 
 const useMainStore = function () {
+    if (stores['main']) {
+        return stores['main'];
+    }
+
     let storeDefinition = defineStore('main', () => {
         const pageLoading = ref(false)
         const chooseData = ref(null)
@@ -14,11 +18,38 @@ const useMainStore = function () {
         const notificationQueue = ref([]);
         const messageQueue = ref([]);
         const version = ref(Data.about.version)
+        const predictParam = reactive({
+            candle: 0,
+            nextProgress: 0,
+            num: 1,
+        })
+        const utilData = reactive({
+            calculateTwoCandlelight: {args: {beginCandleNum: 0, endCandleNum: 1, fineTuning: 0}},
+            calculateCandlelightByCandle: {args: {candleNum: 0, fineTuning: 0}},
+            calculateCandleByCandlelight: {args: {candlelight: 0}},
+        });
 
         function clear() {
             chooseData.value = null;
+            predictParam.candle = 0;
+            predictParam.nextProgress = 0;
+            predictParam.num = 1;
             gameDataVersion.value = null;
             version.value = Data.about.version;
+            utilData.calculateTwoCandlelight = {args: {beginCandleNum: 0, endCandleNum: 1, fineTuning: 0}}
+            utilData.calculateCandlelightByCandle = {args: {candleNum: 0, fineTuning: 0}}
+            utilData.calculateCandleByCandlelight = {args: {candlelight: 0}}
+        }
+
+        function clearUtilData() {
+            utilData.calculateTwoCandlelight.args.beginCandleNum = 0
+            utilData.calculateTwoCandlelight.args.endCandleNum = 1
+            utilData.calculateTwoCandlelight.args.fineTuning = 0
+
+            utilData.calculateCandlelightByCandle.args.candleNum = 0
+            utilData.calculateCandlelightByCandle.args.fineTuning = 0
+
+            utilData.calculateCandleByCandlelight.args.candlelight = 0
         }
 
         return {
@@ -30,12 +61,13 @@ const useMainStore = function () {
             notificationQueue,
             messageQueue,
             hasError,
-            clear
+            utilData,
+            predictParam,
+            clear,
+            clearUtilData
         }
     }, {
-        persist: {
-            enabled: true
-        }
+        persist: true
     })();
 
 
@@ -86,9 +118,34 @@ const useMainStore = function () {
     return storeDefinition;
 }
 
+/**
+ *
+ * @return {{informed:boolean,isLoyalCustomer:boolean}}
+ */
+const loyalCustomerStore = function () {
+    if (stores['loyalCustomer']) {
+        return stores['loyalCustomer'];
+    }
+
+    let storeDefinition = defineStore('loyalCustomer', () => {
+        const informed = ref(false)
+        const isLoyalCustomer = ref(false)
+
+        return {
+            informed, isLoyalCustomer
+        }
+    }, {
+        persist: true
+    })();
+
+    stores['loyalCustomer'] = storeDefinition
+    return storeDefinition;
+}
+
 const stores = {}
 export {
     useMainStore,
+    loyalCustomerStore,
     stores
 }
 

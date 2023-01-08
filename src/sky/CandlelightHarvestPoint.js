@@ -125,7 +125,7 @@ class CandlelightHarvestPoint {
         if (!limit) {
             return true;
         }
-        
+
         let dateStr = limit.date;
         let hasSameAfterLimit = limit.type === 'date_same_after' && dayjs(date.getDate()).isSameOrAfter(dateStr, 'date');
         if (hasSameAfterLimit && !limit.rule.appearIn.includes(date.getDayOfWeek())) {
@@ -144,6 +144,10 @@ class CandlelightHarvestPoint {
      */
     getCandlelightByName(name, date = LocalDate.now()) {
         let point = this.points.get(name);
+        if (!point) {
+            return 0;
+        }
+
         let limit = point.limit;
         if (!limit) {
             return point.candlelight

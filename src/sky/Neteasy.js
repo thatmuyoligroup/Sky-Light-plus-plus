@@ -15,6 +15,7 @@ import Activity from "./Activity.js";
  */
 const RECOMMEND = {}
 let cache = null;
+const debug = false;
 
 const api = {
     data: 'https://sky-api.muyoli.com/data/neteasy/NeteasyData.json',
@@ -36,6 +37,9 @@ let activity;
 let tryNum = 3;
 
 async function loadServerData() {
+    if (debug) {
+        return {code: 403, msg: 'debug'};
+    }
     if (!tryNum) {
         return {code: 403, msg: 'fuse'};
     }
@@ -59,6 +63,7 @@ async function loadData() {
             ElSystemNotice.sendNotice(Data.noticeTemplate.useLocalData)
             let dataResp = await import('./data/NeteasyData.js');
             let mapViewDataResp = await import('./data/MapViewData.js');
+            delete dataResp.default.version;
             chinaData = dataResp.default;
             mapViewData = mapViewDataResp.default;
             break;

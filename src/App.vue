@@ -1,16 +1,18 @@
 <script setup>
 import {RouterView, useRoute, useRouter} from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-import {useMainStore} from "./stores/stores";
+import {loyalCustomerStore, useMainStore} from "./stores/stores";
 import {nextTick, onMounted, ref} from "vue";
 import ElSystemNotice from "./util/ElSystemNotice";
 import Data from "./sky/i18n/Default.js";
 
 let main = useMainStore();
+let loyalCustomer = loyalCustomerStore();
 let router = useRouter()
 let route = useRoute();
 let navDivider = ref(false)
 let isDark = ref(false)
+let isIOSLoyalCustomer = ref(false)
 
 function to(path) {
   if (route.path === path) {
@@ -72,8 +74,39 @@ function loadMediaWidthSetting() {
       })
 }
 
+function loadLoyalCustomer() {
+  function isRunningStandalone() {
+    return (window.matchMedia('(display-mode: standalone)').matches);
+  }
+
+  if (!navigator.standalone && !isRunningStandalone()) {
+    return;
+  }
+
+  loyalCustomer.isLoyalCustomer = true
+  if (navigator.standalone) {
+    isIOSLoyalCustomer.value = true
+  }
+
+  if (loyalCustomer.informed) {
+    return;
+  }
+
+  setTimeout(() => {
+    ElSystemNotice.sendNotice(Data.noticeTemplate.loyalCustomers);
+    loyalCustomer.informed = true
+  }, 50)
+
+}
+
+function reload() {
+  document.getElementsByClassName('replay')[0].className += ' replaying'
+  setTimeout(() => location.reload(), 200)
+}
+
 onMounted(() => {
   ElSystemNotice.load();
+  loadLoyalCustomer();
   loadPrefersColorScheme();
   loadMediaWidthSetting();
 })
@@ -86,11 +119,18 @@ onMounted(() => {
     <img v-if="isDark" alt="logo" class="logo" height="90" src="@/assets/logo-dark.png" width="180"/>
     <img v-else alt="logo" class="logo" height="90" src="@/assets/logo.png" width="180"/>
     <div class="wrapper">
-      <HelloWorld :msg="Data.title"/>
+      <HelloWorld :msg="Data.title">
+        <template v-if="isIOSLoyalCustomer" #title>
+          <van-icon class="replay" name="replay"
+                    @click="reload()"/>
+        </template>
+      </HelloWorld>
       <nav>
         <a :class="route.name==='home'?'router-link-exact-active':''" @click="to('/')">{{ Data.routerTitle.home }}</a>
         <a :class="route.name==='start'?'router-link-exact-active':''"
            @click="to('/start')">{{ Data.routerTitle.start }}</a>
+        <a :class="route.name==='util'?'router-link-exact-active':''"
+           @click="to('/util')">{{ Data.routerTitle.util }}</a>
         <a :class="route.name==='help'?'router-link-exact-active':''"
            @click="to('/help')">{{ Data.routerTitle.help }}</a>
       </nav>
@@ -99,6 +139,7 @@ onMounted(() => {
     </div>
   </header>
   <div>
+    <van-config-provider :theme="isDark?'dark':'light'"/>
     <div
         v-show="main.pageLoading"
         v-loading="main.pageLoading"
@@ -127,6 +168,27 @@ onMounted(() => {
 
 <style scoped>
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.replaying {
+  animation: rotate 0.5s linear infinite;
+}
 
 header {
   line-height: 1.5;

@@ -1,8 +1,8 @@
 import locale from 'element-plus/dist/locale/zh-cn.mjs'
 
-const dataVersion = "Ver.7.0.6 (20230101185835)";
+const dataVersion = "Ver.7.0.6 (20230107124030)";
 const gameVersion = "国服 Ver.0.10.3 (207708)";
-const version = "Ver.1.2.3 (20230101185835)";
+const version = "Ver.1.3.3 (20230107165930)";
 
 const contributor = [
     '<a href="https://weibo.com/u/7360748659">游离</a>',
@@ -23,6 +23,12 @@ const noticeTemplate = {
         type: 'warning',
         duration: 3000,
         message: '这是一条测试通知!'
+    },
+    loyalCustomers: {
+        title: '谢谢！',
+        type: 'success',
+        duration: 3000,
+        message: '感谢支持，相信未来会更好！'
     },
     hasChooseActivity: {
         showClose: true,
@@ -80,7 +86,7 @@ const about = {
         title: '每日任务',
         url: 'https://m.weibo.cn/u/7360748659',
         html: '<a href="https://weibo.com/u/7360748659" target="_blank">立即前往微博</a>',
-        desc: '查看每日日大蜡烛及季节蜡烛位置、每日任务详解、黑暗降临落石点、日程提醒、活动日历攻略',
+        desc: '查看每11.3.大蜡烛及季节蜡烛位置、每日任务详解、黑暗降临落石点、日程提醒、活动日历攻略',
         author: '<a href="https://weibo.com/u/7360748659">今天游离翻车了吗</a>'
     },
     dataSupport: {
@@ -166,6 +172,49 @@ const start = {
         error: "加载失败，请重试！"
     }
 }
+
+/**
+ *
+ * @type {{available: string[],title:{funcName:{name:string,desc:string}}}}
+ */
+const util = {
+    available: ['calculateTwoCandlelight', 'calculateCandlelightByCandle', 'calculateCandleByCandlelight'],
+    i18n:
+        {
+            'calculateTwoCandlelight': {
+                name: "计算两蜡烛之间所需烛火",
+                desc: "计算两蜡烛之间所需烛火，支持微调",
+                args: {
+                    "beginCandleNum_before": "从",
+                    "beginCandleNum_after": "根",
+                    "endCandleNum_before": "到",
+                    "endCandleNum_after": "根",
+                    "fineTuning": "微调",
+                    "result": "结果:"
+                }
+            },
+            'calculateCandlelightByCandle': {
+                name: "通过蜡烛计算所需烛火",
+                desc: "，支持微调",
+                args: {
+                    "candleNum_before": "蜡烛",
+                    "candleNum_after": "根",
+                    "fineTuning": "微调",
+                    "result": "结果:"
+                }
+            },
+            'calculateCandleByCandlelight': {
+                name: "通过烛火计算蜡烛",
+                desc: "，支持微调",
+                args: {
+                    "candlelightNum": "烛火：",
+                    "result": "结果:"
+                }
+            }
+        }
+}
+
+
 const help = {
     defaultActive: "2",
     contributor: {
@@ -229,7 +278,8 @@ const help = {
                     type: 'itemFloat',
                     content: `当存在计算分析结果时，可使用预测功能根据此结果进行多日后蜡烛总数的预测<br/>
                             合成进度参考图：
-                            <img style="width: 100%" alt="无法加载" src="https://sky-res.muyoli.com/images/SkyCandleDemo.jpg"/>
+                            <img v-if="isMobile() || isTablet()" style="width: 100%" alt="无法加载" src="https://sky-res.muyoli.com/images/SkyCandleDemo.jpg" @click="showImagePreview({images: ['https://sky-res.muyoli.com/images/SkyCandleDemo.jpg'],closeable: true})"/>
+                            <el-image v-else style="width: 100%" alt="无法加载" src="https://sky-res.muyoli.com/images/SkyCandleDemo.jpg"  :preview-src-list="['https://sky-res.muyoli.com/images/SkyCandleDemo.jpg']" />
                         `,
                 }, {
                     title: '清空',
@@ -272,7 +322,10 @@ const help = {
             title: '地图级别(烛火统计图)',
             icon: 'box',
             type: 'itemFloat',
-            content: `<img style="width: 100%" alt="无法加载" src="https://sky-res.muyoli.com/images/烛火统计.jpg"/>`,
+            content: `
+                        <img v-if="isMobile() || isTablet()" style="width: 100%" alt="无法加载" src="https://sky-res.muyoli.com/images/烛火统计.jpg" @click="showImagePreview({images: ['https://sky-res.muyoli.com/images/烛火统计.jpg'],closeable: true})"/>
+                        <el-image v-else style="width: 100%" alt="无法加载" src="https://sky-res.muyoli.com/images/烛火统计.jpg"  :preview-src-list="['https://sky-res.muyoli.com/images/烛火统计.jpg']" />
+            `,
         },
 
     ]
@@ -283,10 +336,11 @@ export default {
     title: '烛火计算服务',
     welcome: '欢迎使用光·遇烛火计算服务<span style="white-space:nowrap; ">（国服）</span>',
     loadingText: '正在加载中...',
-    routerTitle: {'home': '主页', 'start': '开始', 'help': '帮助'},
+    routerTitle: {'home': '主页', 'start': '开始', 'util': '工具', 'help': '帮助'},
     elLocal: {locale: locale},
     separator: '、',
     start: start,
+    util: util,
     about: about,
     help: help,
     noticeTemplate: noticeTemplate,

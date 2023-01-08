@@ -69,6 +69,12 @@ let importData = reactive({
   param: '',
   show: true,
 });
+// 预测参数 (WARN:参数初始化不在这里)
+let predictParam = reactive({
+  candle: 0,
+  nextProgress: 0,
+  num: 1,
+});
 // --------------------------------------------------------
 
 
@@ -93,12 +99,7 @@ let hasChooseDateLimit = computed(() => {
 // --------------------------------------------------------
 // 分析结果
 let analyzeResult = reactive({});
-// 预测参数
-let predictParam = reactive({
-  candle: 0,
-  nextProgress: 0,
-  num: 1,
-})
+
 // 计算属性-预测数据
 const predictData = computed(() => {
   let number = predictParam.candle + (analyzeResult.candle * predictParam.num) +
@@ -235,6 +236,7 @@ async function loadGameBaseData() {
 function loadRuntimeData() {
   loadDefaultChooseSpecialCandlelightData()
   loadChooseData()
+  loadPredictParam()
   loadMapCheckBox()
 }
 
@@ -319,6 +321,10 @@ function loadChooseData() {
     chooseData = gameData.cache = storeCache
   }
   runWhere.chooseData = chooseData
+}
+
+function loadPredictParam() {
+  predictParam = stores['main'].predictParam;
 }
 
 

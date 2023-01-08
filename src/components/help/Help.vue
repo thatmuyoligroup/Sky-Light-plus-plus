@@ -10,8 +10,14 @@ export default {
   props: {
     item: Array,
     prefix: String,
-  }
+  },
+
 };
+
+</script>
+<script setup>
+import {showImagePreview} from "vant";
+import device from "current-device";
 
 </script>
 
@@ -27,12 +33,15 @@ export default {
     <help-item-float v-else-if="obj.type==='itemFloat'" :icon="obj.icon"
                      :index="prefix? ''+prefix+(index+1) : ''+(index+1)"
                      :title="obj.title">
-      <div v-html="obj.content"></div>
+      <component
+          :is="{template: obj.content,methods:{showImagePreview,isMobile:device.mobile,isTablet:device.tablet,isDesktop:device.desktop}}"/>
+
     </help-item-float>
 
     <help-item v-else-if="obj.type==='item'" :icon="obj.icon" :index="prefix?''+prefix+(index+1):''+(index+1)"
                :title="obj.title">
-      <div v-html="obj.content"></div>
+      <component
+          :is="{template: obj.content,methods:{showImagePreview,isMobile:device.mobile,isTablet:device.tablet,isDesktop:device.desktop}}"/>
     </help-item>
   </template>
 </template>

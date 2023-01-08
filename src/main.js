@@ -1,7 +1,8 @@
-import {createApp} from 'vue'
+import {createApp} from 'vue/dist/vue.esm-bundler';
 import {createPinia} from 'pinia'
-import piniaPersist from 'pinia-plugin-persist'
+import piniaPersist from 'pinia-plugin-persistedstate'
 import ElementPlus from 'element-plus'
+import Vant from 'vant';
 import 'element-plus/dist/index.css'
 import 'element-plus/theme-chalk/dark/css-vars.css'
 import dayjs from "dayjs";
@@ -11,6 +12,7 @@ import router from './router'
 import './assets/main.css'
 import './assets/sky.scss'
 import 'leaflet/dist/leaflet.css'
+import 'vant/lib/index.css';
 
 import '@geoman-io/leaflet-geoman-free/dist/leaflet-geoman.css';
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
@@ -23,6 +25,7 @@ dayjs.extend(isSameOrAfter)
 
 const app = createApp(App)
 app.use(ElementPlus, Default.elLocal)
+app.use(Vant)
 
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
     app.component(key, component)

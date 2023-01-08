@@ -1,5 +1,5 @@
 export default {
-    "version": "Ver.7.0.6 (20230101185835)",
+    "version": "Ver.7.0.6 (20230107124030)",
     "candlelightType": {
         "普通蜡烛": 1,
         "普通黑暗植物": 2,
@@ -2148,7 +2148,7 @@ export default {
             "name": "每日大蜡烛",
             "candlelight": 50,
             "maxSize": 52,
-            "desc": "4个为一组；工作日一组，周末共三组，特殊节日全图大蜡烛",
+            "desc": "4个为一组；工作日一组，周五至周日共三组，特殊节日全图大蜡烛",
             "option": {
                 "selectItem": [
                     {
@@ -2162,6 +2162,10 @@ export default {
                     {
                         "name": "3组",
                         "size": 12
+                    },
+                    {
+                        "name": "全图大蜡烛",
+                        "size": 52
                     }
                 ],
                 "selectPlaceholder": "每组4堆",
@@ -2173,7 +2177,7 @@ export default {
             "name": "乐谱挑战",
             "candlelight": 50,
             "maxSize": 2,
-            "desc": "50%+获得50烛火，80%+(出现金蝴蝶)获得100烛火，一天最多100烛火",
+            "desc": "50%+获得50烛火，80%+(出现金蝴蝶)获得100烛火，每档仅可获取一次",
             "option": {
                 "selectItem": [
                     {
@@ -2270,7 +2274,7 @@ export default {
             "desc": "单独挂机点约15-20分钟收满"
         },
         {
-            "name": "圆梦村温泉",
+            "name": "圆梦村温泉落雪",
             "mapNames": [
                 "圆梦村"
             ],
@@ -2295,7 +2299,7 @@ export default {
             "desc": "圣岛海龟3s/滴需12分30秒挂满\n音乐大厅30s/2滴需62分30秒挂满;烛火范围较大，需移动收火"
         },
         {
-            "name": "圆梦村落雪",
+            "name": "圆梦村溜冰落雪",
             "mapNames": [
                 "圆梦村"
             ],
@@ -2311,7 +2315,7 @@ export default {
                     ]
                 }
             },
-            "desc": "2022.1.14开始，只有五六日奇数小时前15分钟有"
+            "desc": "2022.1.14开始，仅于周五至周日奇数小时前15分钟存在"
         }
     ],
     "activities": [

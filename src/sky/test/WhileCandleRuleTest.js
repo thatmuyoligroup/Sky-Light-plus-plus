@@ -1,5 +1,7 @@
-import Neteasy from "../Neteasy.js";
+import buildGameData from "../Neteasy.js";
 import {equals, print} from "./Test.js";
+
+let Neteasy = await buildGameData;
 
 let whileCandleRule = Neteasy.whileCandleRule;
 
@@ -90,10 +92,6 @@ function testNextProgressCandlelight() {
         actual: actual
     }
 }
-
-
-console.log(whileCandleRule.calculateNextNeedCandlelightProgress(1094))
-
 
 console.log('【白蜡烛规则测试用例】')
 print(testCandlelight())
