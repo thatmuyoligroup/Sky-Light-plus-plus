@@ -86,7 +86,7 @@ const about = {
         title: '每日任务',
         url: 'https://m.weibo.cn/u/7360748659',
         html: '<a href="https://weibo.com/u/7360748659" target="_blank">立即前往微博</a>',
-        desc: '查看每11.3.大蜡烛及季节蜡烛位置、每日任务详解、黑暗降临落石点、日程提醒、活动日历攻略',
+        desc: '查看每日大蜡烛及季节蜡烛位置、每日任务详解、黑暗降临落石点、日程提醒、活动日历攻略',
         author: '<a href="https://weibo.com/u/7360748659">今天游离翻车了吗</a>'
     },
     dataSupport: {
