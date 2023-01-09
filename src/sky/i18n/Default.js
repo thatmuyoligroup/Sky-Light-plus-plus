@@ -178,7 +178,7 @@ const start = {
  * @type {{available: string[],title:{funcName:{name:string,desc:string}}}}
  */
 const util = {
-    available: ['calculateTwoCandlelight', 'calculateCandlelightByCandle', 'calculateCandleByCandlelight'],
+    available: ['calculateTwoCandlelight', 'calculateCandleByCandlelight'],
     i18n:
         {
             'calculateTwoCandlelight': {
