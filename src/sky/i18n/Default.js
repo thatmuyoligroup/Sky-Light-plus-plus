@@ -2,7 +2,7 @@ import locale from 'element-plus/dist/locale/zh-cn.mjs'
 
 const dataVersion = "Ver.7.0.6 (20230107124030)";
 const gameVersion = "国服 Ver.0.10.3 (207708)";
-const version = "Ver.1.3.5 (20230108225358)";
+const version = "Ver.1.3.5 (20230109104827)";
 
 const contributor = [
     '<a href="https://weibo.com/u/7360748659">游离</a>',
@@ -182,8 +182,8 @@ const util = {
     i18n:
         {
             'calculateTwoCandlelight': {
-                name: "计算两蜡烛之间所需烛火",
-                desc: "计算两蜡烛之间所需烛火，支持微调",
+                name: "计算两根蜡烛之间所需的烛火数量",
+                desc: "计算两根蜡烛之间所需烛火，支持微调",
                 args: {
                     "beginCandleNum_before": "从",
                     "beginCandleNum_after": "根",
@@ -194,7 +194,7 @@ const util = {
                 }
             },
             'calculateCandlelightByCandle': {
-                name: "通过蜡烛计算所需烛火",
+                name: "通过蜡烛计算所需的烛火数量",
                 desc: "，支持微调",
                 args: {
                     "candleNum_before": "蜡烛",
@@ -204,7 +204,7 @@ const util = {
                 }
             },
             'calculateCandleByCandlelight': {
-                name: "通过烛火计算蜡烛",
+                name: "通过烛火计算可获得的蜡烛数量",
                 desc: "，支持微调",
                 args: {
                     "candlelightNum": "烛火：",
