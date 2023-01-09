@@ -1,6 +1,6 @@
 <script setup>
 import {onBeforeMount, onMounted, ref} from 'vue';
-import UtilFunction0 from "../sky/UtilFunction.js";
+import UtilFunction0 from "../components/util/UtilFunction.js";
 import Data from '../sky/i18n/Default'
 
 let functions;

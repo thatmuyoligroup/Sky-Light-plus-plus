@@ -1,7 +1,7 @@
-import WhileCandleRule from "./WhileCandleRule";
-import buildGameData from "./Neteasy";
-import Data from '../sky/i18n/Default';
-import {stores} from "../stores/stores";
+import WhileCandleRule from "../../sky/WhileCandleRule";
+import buildGameData from "../../sky/Neteasy";
+import Data from '../../sky/i18n/Default';
+import {stores} from "../../stores/stores";
 
 let Neteasy;
 
