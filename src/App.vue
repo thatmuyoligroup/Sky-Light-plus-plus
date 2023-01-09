@@ -2,7 +2,7 @@
 import {RouterView, useRoute, useRouter} from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import {loyalCustomerStore, useMainStore} from "./stores/stores";
-import {nextTick, onMounted, ref, watch} from "vue";
+import {nextTick, onMounted, ref} from "vue";
 import ElSystemNotice from "./util/ElSystemNotice";
 import Data from "./sky/i18n/Default.js";
 
@@ -48,6 +48,7 @@ function loadPrefersColorScheme() {
     isDark.value = false;
     lightMode();
   }
+  main.isDark = isDark.value;
   window.matchMedia('(prefers-color-scheme: dark)')
       .addEventListener('change', event => {
         if (event.matches) {
@@ -60,6 +61,7 @@ function loadPrefersColorScheme() {
           isDark.value = false;
           lightMode();
         }
+        main.isDark = isDark.value;
       })
 }
 
@@ -101,10 +103,6 @@ function reload() {
   document.getElementsByClassName('replay')[0].className += ' replaying'
   setTimeout(() => location.reload(), 200)
 }
-
-watch(isDark, () => {
-  main.isDark = isDark.value;
-})
 
 onMounted(() => {
   ElSystemNotice.load();
