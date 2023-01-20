@@ -1153,12 +1153,12 @@ export default {
                 "candlelightPoints": [
                     {
                         "code": "040201",
-                        "candlelight": 1
+                        "type": 3,
+                        "candlelight": 50
                     },
                     {
                         "code": "040202",
-                        "type": 3,
-                        "candlelight": 50
+                        "candlelight": 1
                     },
                     {
                         "code": "040203",
