@@ -1,5 +1,4 @@
 export default {
-    "version": "Ver.7.0.6 (20230107124030)",
     "candlelightType": {
         "普通蜡烛": 1,
         "普通黑暗植物": 2,
@@ -1160,6 +1159,11 @@ export default {
                         "code": "040202",
                         "type": 3,
                         "candlelight": 50
+                    },
+                    {
+                        "code": "040203",
+                        "type": 3,
+                        "candlelight": 50
                     }
                 ]
             },
@@ -2073,6 +2077,11 @@ export default {
                     {
                         "code": "060706",
                         "candlelight": 53
+                    },
+                    {
+                        "code": "060707",
+                        "type": 3,
+                        "candlelight": 50
                     }
                 ]
             },
@@ -2113,6 +2122,39 @@ export default {
                     {
                         "code": "060908",
                         "candlelight": 46
+                    }
+                ]
+            },
+            {
+                "name": "庇护所",
+                "candlelightPoints": [
+                    {
+                        "code": "061001",
+                        "candlelight": 5
+                    },
+                    {
+                        "code": "061002",
+                        "candlelight": 5
+                    },
+                    {
+                        "code": "061003",
+                        "candlelight": 3
+                    },
+                    {
+                        "code": "061004",
+                        "candlelight": 3
+                    },
+                    {
+                        "code": "061005",
+                        "candlelight": 5
+                    },
+                    {
+                        "code": "061006",
+                        "candlelight": 5
+                    },
+                    {
+                        "code": "061007",
+                        "candlelight": 5
                     }
                 ]
             }
