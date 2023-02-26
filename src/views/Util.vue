@@ -60,3 +60,9 @@ function clear() {
     </el-container>
   </div>
 </template>
+<style>
+ .el-collapse-item:last-of-type > div > .el-collapse-item__header,
+ .el-collapse-item:last-of-type > .el-collapse-item__wrap {
+   border-bottom: none;
+ }
+</style>

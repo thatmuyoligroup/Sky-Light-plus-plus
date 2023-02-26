@@ -2,7 +2,7 @@ import locale from 'element-plus/dist/locale/zh-cn.mjs'
 
 const dataVersion = "Ver.8.0.0 (20230205082612)";
 const gameVersion = "国服 Ver.0.10.5 (209738)";
-const version = "Ver.1.3.5 (20230109104827)";
+const version = "Ver.1.3.6 (20230226110300)";
 
 const contributor = [
     '<a href="https://weibo.com/u/7360748659">游离</a>',
