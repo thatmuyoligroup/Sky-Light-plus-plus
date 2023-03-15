@@ -6,6 +6,8 @@ import {nextTick, onMounted, ref} from "vue";
 import ElSystemNotice from "./util/ElSystemNotice";
 import Data from "./sky/i18n/Default.js";
 
+const enableTest = false;
+
 let main = useMainStore();
 let loyalCustomer = loyalCustomerStore();
 let router = useRouter()
@@ -127,42 +129,47 @@ onMounted(() => {
       </HelloWorld>
       <nav>
         <a :class="route.name==='home'?'router-link-exact-active':''" @click="to('/')">{{ Data.routerTitle.home }}</a>
-        <a :class="route.name==='start'?'router-link-exact-active':''"
-           @click="to('/start')">{{ Data.routerTitle.start }}</a>
         <a :class="route.name==='util'?'router-link-exact-active':''"
            @click="to('/util')">{{ Data.routerTitle.util }}</a>
         <a :class="route.name==='help'?'router-link-exact-active':''"
            @click="to('/help')">{{ Data.routerTitle.help }}</a>
+        <a :class="route.name==='about'?'router-link-exact-active':''"
+           @click="to('/about')">{{ Data.routerTitle.about }}</a>
       </nav>
       <el-divider v-if="navDivider"
                   style="margin-top: 10px;border-top: 1px  var(--color-border) var(--el-border-style);"/>
     </div>
   </header>
   <div>
-    <van-config-provider :theme="isDark?'dark':'light'"/>
-    <div
-        v-show="main.pageLoading"
-        v-loading="main.pageLoading"
-        :element-loading-spinner="null"
-        :element-loading-text=" Data.loadingText "
-        class="loading-green"
-        element-loading-background="rgba(0, 0, 0, 0.0)"
-        element-loading-svg-view-box="0,0,0,0"
-        style="margin-top: 10vh;"
-    >
+    <template v-if="!enableTest">
+      <van-config-provider :theme="isDark?'dark':'light'"/>
+      <div
+          v-show="main.pageLoading"
+          v-loading="main.pageLoading"
+          :element-loading-spinner="null"
+          :element-loading-text=" Data.loadingText "
+          class="loading-green"
+          element-loading-background="rgba(0, 0, 0, 0.0)"
+          element-loading-svg-view-box="0,0,0,0"
+          style="margin-top: 10vh;"
+      >
 
-    </div>
-    <RouterView v-slot="{ Component,route }">
-      <transition name="fade">
-        <div>
+      </div>
+      <RouterView v-slot="{ Component,route }">
+        <transition name="fade">
+          <div>
 
-          <div v-show="!main.pageLoading">
-            <component :is="Component" :key="route"/>
+            <div v-show="!main.pageLoading">
+              <component :is="Component" :key="route"/>
+            </div>
+
           </div>
-
-        </div>
-      </transition>
-    </RouterView>
+        </transition>
+      </RouterView>
+    </template>
+    <template v-else>
+      测试版本尚未开启，请访问正式版： <a href="https://sky.muyoli.com" target="_self">sky.muyoli.com</a>
+    </template>
   </div>
 </template>
 

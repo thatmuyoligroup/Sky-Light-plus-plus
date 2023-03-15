@@ -2,7 +2,7 @@ import locale from 'element-plus/dist/locale/zh-cn.mjs'
 
 const dataVersion = "Ver.8.0.0 (20230205082612)";
 const gameVersion = "国服 Ver.0.10.5 (209738)";
-const version = "Ver.1.3.6 (20230226110300)";
+const version = "Ver.1.4.0 (20230315153800)";
 
 const contributor = [
     '<a href="https://weibo.com/u/7360748659">游离</a>',
@@ -355,7 +355,7 @@ export default {
     title: '烛火计算服务',
     welcome: '欢迎使用光·遇烛火计算服务<span style="white-space:nowrap; ">（国服）</span>',
     loadingText: '正在加载中...',
-    routerTitle: {'start': '开始', 'util': '工具', 'help': '帮助', 'home': '关于'},
+    routerTitle: {'home': '开始', 'util': '工具', 'help': '帮助', 'about': '关于'},
     elLocal: {locale: locale},
     separator: '、',
     start: start,
