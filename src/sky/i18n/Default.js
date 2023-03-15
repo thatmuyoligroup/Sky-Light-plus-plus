@@ -355,7 +355,7 @@ export default {
     title: '烛火计算服务',
     welcome: '欢迎使用光·遇烛火计算服务<span style="white-space:nowrap; ">（国服）</span>',
     loadingText: '正在加载中...',
-    routerTitle: {'home': '主页', 'start': '开始', 'util': '工具', 'help': '帮助'},
+    routerTitle: {'start': '开始', 'util': '工具', 'help': '帮助', 'home': '关于'},
     elLocal: {locale: locale},
     separator: '、',
     start: start,
