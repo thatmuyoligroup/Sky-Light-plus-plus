@@ -2296,7 +2296,7 @@ export default {
             "mapNames": [
                 "幽光山洞"
             ],
-            "candlelight": 250,
+            "candlelight": 375,
             "desc": "单独挂机点约15-20分钟收满"
         },
         {
@@ -2304,7 +2304,7 @@ export default {
             "mapNames": [
                 "霞谷神殿"
             ],
-            "candlelight": 250,
+            "candlelight": 375,
             "desc": "单独挂机点约15-20分钟收满"
         },
         {
@@ -2312,7 +2312,7 @@ export default {
             "mapNames": [
                 "巨兽荒原"
             ],
-            "candlelight": 250,
+            "candlelight": 375,
             "desc": "单独挂机点约15-20分钟收满"
         },
         {
@@ -2320,7 +2320,7 @@ export default {
             "mapNames": [
                 "圆梦村"
             ],
-            "candlelight": 250,
+            "candlelight": 0,
             "desc": "30s/2滴需62分30秒挂满;烛火范围较大，需移动收火"
         },
         {
@@ -2328,7 +2328,7 @@ export default {
             "mapNames": [
                 "四层"
             ],
-            "candlelight": 250,
+            "candlelight": 0,
             "desc": "30s/2滴需62分30秒挂满"
         },
         {
@@ -2337,7 +2337,7 @@ export default {
                 "圣岛",
                 "音乐大厅"
             ],
-            "candlelight": 250,
+            "candlelight": 375,
             "desc": "圣岛海龟3s/滴需12分30秒挂满\n音乐大厅30s/2滴需62分30秒挂满;烛火范围较大，需移动收火"
         },
         {
