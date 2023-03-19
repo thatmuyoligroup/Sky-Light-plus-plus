@@ -2316,22 +2316,6 @@ export default {
             "desc": "单独挂机点约15-20分钟收满"
         },
         {
-            "name": "圆梦村温泉落雪",
-            "mapNames": [
-                "圆梦村"
-            ],
-            "candlelight": 0,
-            "desc": "30s/2滴需62分30秒挂满;烛火范围较大，需移动收火"
-        },
-        {
-            "name": "禁阁四层",
-            "mapNames": [
-                "四层"
-            ],
-            "candlelight": 0,
-            "desc": "30s/2滴需62分30秒挂满"
-        },
-        {
             "name": "圣岛海龟、音乐大厅",
             "mapNames": [
                 "圣岛",
