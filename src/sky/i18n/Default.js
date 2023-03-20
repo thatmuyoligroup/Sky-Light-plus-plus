@@ -1,7 +1,7 @@
 import locale from 'element-plus/dist/locale/zh-cn.mjs'
 
 const dataVersion = "Ver.8.1.1 (20230320080500)";
-const gameVersion = "国服 Ver.0.10.5 (209738)";
+const gameVersion = "中国区服务器 Ver.0.10.7 (212548)";
 const version = "Ver.1.4.0 (20230315153800)";
 
 const contributor = [
