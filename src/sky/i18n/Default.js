@@ -366,7 +366,7 @@ export default {
     messageTemplate: messageTemplate,
     copyright: `
         本项目为开源项目，所使用的任何代码、工具不隶属于thatgamecompany及其附属公司，也不受其赞助或<span style="white-space:nowrap; ">授权。</span><br/>
-        本项目中所使用的地图名称及游戏截图中的建模版权所属<span style="white-space:nowrap; ">thatgamecompany。</span><br/><a href="https://weibo.com/u/6073956879">@Muyoli_木月里</a>
+        本项目中所使用的地图名称及游戏截图中的建模，其版权所属于thatgamecompany。</span><br/><a href="https://weibo.com/u/6073956879">@Muyoli_木月里</a>
      
     `,
 
