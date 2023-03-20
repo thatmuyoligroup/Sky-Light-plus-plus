@@ -1136,10 +1136,6 @@ export default {
                     {
                         "code": "030908",
                         "candlelight": 8
-                    },
-                    {
-                        "code": "030909",
-                        "candlelight": 3
                     }
                 ]
             }
