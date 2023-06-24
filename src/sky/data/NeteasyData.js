@@ -2276,7 +2276,64 @@ export default {
                 "input": true,
                 "inputPlaceholder": "烛火水母(只)"
             }
+        },
+      {
+        "name": "信任历练",
+        "candlelight": 2,
+        "maxSize": 40,
+        "desc": "",
+        "option": {
+          "group": {
+            "name": "夜行历练",
+            "type": "button"
+          },
+          "input": true,
+          "inputPlaceholder": "完成进度"
         }
+      },
+      {
+        "name": "互助历练",
+        "lowestCandlelight": 96,
+        "candlelight": 8,
+        "maxSize": 12,
+        "desc": "",
+        "option": {
+          "group": {
+            "name": "夜行历练",
+            "type": "button"
+          },
+          "input": true,
+          "inputPlaceholder": "完成进度"
+        }
+      },
+      {
+        "name": "合作历练",
+        "candlelight": 8,
+        "maxSize": 15,
+        "desc": "",
+        "option": {
+          "group": {
+            "name": "夜行历练",
+            "type": "button"
+          },
+          "input": true,
+          "inputPlaceholder": "完成进度"
+        }
+      },
+      {
+        "name": "列队历练",
+        "candlelight": 30,
+        "maxSize": 9,
+        "desc": "",
+        "option": {
+          "group": {
+            "name": "夜行历练",
+            "type": "button"
+          },
+          "input": true,
+          "inputPlaceholder": "完成进度"
+        }
+      }
     ],
     "candlelightHarvestPoint": [
         {

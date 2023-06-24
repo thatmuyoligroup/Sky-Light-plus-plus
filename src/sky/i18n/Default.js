@@ -1,8 +1,8 @@
 import locale from 'element-plus/dist/locale/zh-cn.mjs'
 
-const dataVersion = "Ver.8.1.1 (20230320080500)";
-const gameVersion = "中国区服务器 Ver.0.10.7 (212548)";
-const version = "Ver.1.4.0 (20230315153800)";
+const dataVersion = "Ver.10.0.1.220288";
+const gameVersion = "中国区服务器 Ver.0.10.9.24798";
+const version = "Ver.1.5.0 (202306241530)";
 
 const contributor = [
     '<a href="https://weibo.com/u/7360748659">游离</a>',
@@ -92,7 +92,7 @@ const messageTemplate = {
 };
 
 const about = {
-    authorTitle: '作者: ',
+    authorTitle: '',
     authorSeparator: '&nbsp;&nbsp;&nbsp;',
     dailyTasks: {
         title: '每日任务',
@@ -102,9 +102,9 @@ const about = {
         author: '<a href="https://weibo.com/u/7360748659">今天游离翻车了吗</a>'
     },
     dataSupport: {
-        title: "数据支持",
-        desc: "计算服务使用到的各类数据",
-        author: "<a href='https://weibo.com/u/2630772743'>Icetric冰介</a>",
+        title: "数据版本",
+        desc: "",
+        author: "",
         versionTitle: "数据版本: ",
         version: dataVersion,
         href: "https://weibo.com/status/4802073034752716"
