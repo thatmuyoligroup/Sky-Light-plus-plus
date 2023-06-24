@@ -11,6 +11,7 @@ let about = Data.about
 </script>
 
 <template>
+  <!-- 每日任务 -->
   <WelcomeItem>
     <template #icon>
       <DocumentationIcon/>
@@ -22,14 +23,16 @@ let about = Data.about
     <span>{{ about.authorTitle }}<span v-html="about.dailyTasks.author"></span></span>
   </WelcomeItem>
 
-
+  <!-- 数据支持（版本） -->
   <WelcomeItem>
     <template #icon>
       <EcosystemIcon/>
     </template>
     <template #heading>{{ about.dataSupport.title }}</template>
-    {{ about.dataSupport.desc }}
-    <br/>
+    <template v-if="about.dataSupport.desc">
+      {{ about.dataSupport.desc }}
+      <br/>
+    </template>
     {{ about.authorTitle }}
     <span v-html="about.dataSupport.author"></span>
     <div></div>
@@ -37,6 +40,7 @@ let about = Data.about
     {{ about.dataSupport.version }}
   </WelcomeItem>
 
+  <!-- 关于项 -->
   <WelcomeItem>
     <template #icon>
       <CommunityIcon/>
@@ -44,14 +48,13 @@ let about = Data.about
     <template #heading>{{ about.openSource.title }}</template>
     <div v-html="about.openSource.html"></div>
     {{ about.authorTitle }}
-    <span v-for=" (item,index) in about.author" v-html="(index>0?about.authorSeparator:'')+item"></span>
+    <span v-for=" (item,index) in about.author" :key="index" v-html="(index>0?about.authorSeparator:'')+item"></span>
     <br/>
     {{ about.gameVersionTitle }}{{ about.gameVersion }}<br/>
     {{ about.versionTitle }} {{ about.version }}
-
-
   </WelcomeItem>
 
+  <!-- 官方地址 -->
   <WelcomeItem>
     <template #icon>
       <SupportIcon/>
