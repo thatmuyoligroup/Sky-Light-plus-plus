@@ -41,16 +41,10 @@ export default {
         25000
     ],
     "skyMap": {
-        "遇境": [
+        "家园": [
             {
-                "name": "遇境大厅",
+                "name": "遇境",
                 "candlelightPoints": [
-                    {
-                        "name": "遇境鱼塘烛火",
-                        "code": "000101",
-                        "candlelight": 6,
-                        "desc": "旅行先祖站的地方"
-                    },
                     {
                         "name": "遇境裤子衣橱烛火",
                         "code": "000102",
@@ -86,6 +80,16 @@ export default {
                         "candlelight": 4
                     }
                 ]
+            },
+            {
+                "name": "云巢",
+                "candlelightPoints": [
+                    {"code": "000201", "candlelight": 3},
+                    {"code": "000202", "candlelight": 4},
+                    {"code": "000203", "candlelight": 4},
+                    {"code": "000204", "candlelight": 4},
+                    {"code": "000205", "candlelight": 4},
+                    {"code": "000206", "candlelight": 4}]
             }
         ],
         "晨岛": [
@@ -137,7 +141,8 @@ export default {
                         "code": "010108",
                         "candlelight": 15,
                         "desc": "预言山谷洞口的烛火"
-                    }
+                    },
+                    {"code": "010109", "candlelight": "17"}
                 ]
             },
             {
@@ -1939,6 +1944,21 @@ export default {
                 ]
             },
             {
+                "name": "月牙绿洲",
+                "candlelightPoints": [
+                    {"code": "061101", "candlelight": 200},
+                    {"code": "061102", "candlelight": 39},
+                    {"code": "061103", "candlelight": 30},
+                    {"code": "061104", "candlelight": 24},
+                    {"code": "061105", "candlelight": 54},
+                    {"code": "061106", "candlelight": 45},
+                    {"code": "061107", "candlelight": 42},
+                    {"code": "061108", "candlelight": 5},
+                    {"code": "061109", "candlelight": 18},
+                    {"code": "061110", "candlelight": 18}
+                ]
+            },
+            {
                 "name": "秘密基地",
                 "desc": "别称TGC办公室",
                 "candlelightPoints": [
@@ -2277,63 +2297,63 @@ export default {
                 "inputPlaceholder": "烛火水母(只)"
             }
         },
-      {
-        "name": "信任历练",
-        "candlelight": 2,
-        "maxSize": 40,
-        "desc": "",
-        "option": {
-          "group": {
-            "name": "夜行历练",
-            "type": "button"
-          },
-          "input": true,
-          "inputPlaceholder": "完成进度"
+        {
+            "name": "信任历练",
+            "candlelight": 2,
+            "maxSize": 40,
+            "desc": "",
+            "option": {
+                "group": {
+                    "name": "夜行历练",
+                    "type": "button"
+                },
+                "input": true,
+                "inputPlaceholder": "完成进度"
+            }
+        },
+        {
+            "name": "互助历练",
+            "lowestCandlelight": 96,
+            "candlelight": 8,
+            "maxSize": 12,
+            "desc": "",
+            "option": {
+                "group": {
+                    "name": "夜行历练",
+                    "type": "button"
+                },
+                "input": true,
+                "inputPlaceholder": "完成进度"
+            }
+        },
+        {
+            "name": "合作历练",
+            "candlelight": 8,
+            "maxSize": 15,
+            "desc": "",
+            "option": {
+                "group": {
+                    "name": "夜行历练",
+                    "type": "button"
+                },
+                "input": true,
+                "inputPlaceholder": "完成进度"
+            }
+        },
+        {
+            "name": "列队历练",
+            "candlelight": 30,
+            "maxSize": 9,
+            "desc": "",
+            "option": {
+                "group": {
+                    "name": "夜行历练",
+                    "type": "button"
+                },
+                "input": true,
+                "inputPlaceholder": "完成进度"
+            }
         }
-      },
-      {
-        "name": "互助历练",
-        "lowestCandlelight": 96,
-        "candlelight": 8,
-        "maxSize": 12,
-        "desc": "",
-        "option": {
-          "group": {
-            "name": "夜行历练",
-            "type": "button"
-          },
-          "input": true,
-          "inputPlaceholder": "完成进度"
-        }
-      },
-      {
-        "name": "合作历练",
-        "candlelight": 8,
-        "maxSize": 15,
-        "desc": "",
-        "option": {
-          "group": {
-            "name": "夜行历练",
-            "type": "button"
-          },
-          "input": true,
-          "inputPlaceholder": "完成进度"
-        }
-      },
-      {
-        "name": "列队历练",
-        "candlelight": 30,
-        "maxSize": 9,
-        "desc": "",
-        "option": {
-          "group": {
-            "name": "夜行历练",
-            "type": "button"
-          },
-          "input": true,
-          "inputPlaceholder": "完成进度"
-        }
-      }
     ],
     "candlelightHarvestPoint": [
         {
@@ -2400,7 +2420,7 @@ export default {
     "activities": [
         {
             "name": "宴会节篝火",
-            "mapName": "遇境大厅",
+            "mapName": "遇境",
             "candlelight": 1000,
             "type": "candlelightHarvestPoint",
             "desc": "4秒/滴，需要66分40秒挂满",

@@ -1,14 +1,14 @@
 import locale from 'element-plus/dist/locale/zh-cn.mjs'
 
-const dataVersion = "Ver.10.0.1.220288";
-const gameVersion = "中国区服务器 Ver.0.10.9.24798";
-const version = "Ver.1.5.0 (202306241530)";
+const dataVersion = "Ver.12.0.1.240908.31954";
+const gameVersion = "0.12.0.240908(31954)";
+const version = "Ver.1.5.1 (202401242320)";
 
 const contributor = [
     '<a href="https://weibo.com/u/7360748659">游离</a>',
     '<a href="https://weibo.com/u/5685423899">包包</a>',
     '<a href="https://v.kuaishou.com/Ejc9ZN">氢腥</a>',
-    '<a href="https://www.gitee.com/jianjianghui" >江晖</a>',
+    '江晖',
     '松奈',
     '<a href="https://weibo.com/u/2630772743">冰介</a>',
     '<a href="https://weibo.com/u/5861905692">雨季</a>',
@@ -80,9 +80,9 @@ const noticeTemplate = {
     },
     useLocalData: {
         showClose: true,
-        title: '注意',
-        type: 'warning',
-        message: '无法获取服务器数据，将使用已缓存的本地数据库文件！'
+        title: '成功',
+        type: 'success',
+        message: '成功加载数据库文件！'
     }
 };
 const messageTemplate = {
@@ -346,7 +346,7 @@ const help = {
                         
             `,
         },
-
+    
     ]
 }
 
@@ -369,5 +369,5 @@ export default {
         本项目中使用的《光·遇》地图名称及建模截图，其版权属于thatgamecompany。</span><br/><a href="https://weibo.com/u/6073956879">@Muyoli_木月里</a>
      
     `,
-
+    
 }
