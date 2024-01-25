@@ -142,7 +142,7 @@ export default {
                         "candlelight": 15,
                         "desc": "预言山谷洞口的烛火"
                     },
-                    {"code": "010109", "candlelight": "17"}
+                    {"code": "010109", "candlelight": 17}
                 ]
             },
             {
