@@ -78,6 +78,10 @@ export default {
                         "name": "遇境背饰衣橱烛火",
                         "code": "000106",
                         "candlelight": 4
+                    },
+                    {
+                        "code": "000107",
+                        "candlelight": 5
                     }
                 ]
             },
@@ -1946,7 +1950,7 @@ export default {
             {
                 "name": "月牙绿洲",
                 "candlelightPoints": [
-                    {"code": "061101", "candlelight": 200},
+                    {"code": "061101", "candlelight": 1},
                     {"code": "061102", "candlelight": 39},
                     {"code": "061103", "candlelight": 30},
                     {"code": "061104", "candlelight": 24},

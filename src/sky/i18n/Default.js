@@ -1,7 +1,7 @@
 import locale from 'element-plus/dist/locale/zh-cn.mjs'
 
-const dataVersion = "Ver.12.0.1.240908.31954";
-const gameVersion = "0.12.0.240908(31954)";
+const dataVersion = "Ver.12.1.0";
+const gameVersion = "0.12.2.247348.32937)";
 const version = "Ver.1.5.1 (202401242320)";
 
 const contributor = [
@@ -346,7 +346,7 @@ const help = {
                         
             `,
         },
-    
+
     ]
 }
 
@@ -369,5 +369,5 @@ export default {
         本项目中使用的《光·遇》地图名称及建模截图，其版权属于thatgamecompany。</span><br/><a href="https://weibo.com/u/6073956879">@Muyoli_木月里</a>
      
     `,
-    
+
 }

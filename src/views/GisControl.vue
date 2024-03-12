@@ -31,7 +31,7 @@ onMounted(() => {
 })
 
 let imageUrl = 'https://sky-res.muyoli.com/' +
-    'images/maps/禁阁/月牙绿洲.jpg';
+    'images/maps/家园/遇境.jpg';
 let codePrefix = "0611"
 
 let iconLayerGroup = null

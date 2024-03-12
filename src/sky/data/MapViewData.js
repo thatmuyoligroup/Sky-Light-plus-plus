@@ -210,6 +210,17 @@ export default {
                             ]
                         }
                     }
+                },
+                {
+                    "code": "000107",
+                    "geoJSON": {
+                        "type": "Feature",
+                        "properties": {"code": "061101", "candlelight": "5"},
+                        "geometry": {
+                            "type": "Polygon",
+                            "coordinates": [[[1031, 584.674301], [1031, 734.763184], [1180, 734.763184], [1180, 584.674301], [1031, 584.674301]]]
+                        }
+                    }
                 }
             ],
             "width": 2388,
@@ -15070,7 +15081,7 @@ export default {
                     "code": "061101",
                     "geoJSON": {
                         "type": "Feature",
-                        "properties": {"code": "061101", "candlelight": "200"},
+                        "properties": {"code": "061101", "candlelight": "1"},
                         "geometry": {
                             "type": "Polygon",
                             "coordinates": [[[2083.395531, 543.483758], [2083.395531, 696.469473], [2239.412908, 696.469473], [2239.412908, 543.483758], [2083.395531, 543.483758]]]
