@@ -215,7 +215,7 @@ export default {
                     "code": "000107",
                     "geoJSON": {
                         "type": "Feature",
-                        "properties": {"code": "061101", "candlelight": "5"},
+                        "properties": {"code": "000107", "candlelight": "5"},
                         "geometry": {
                             "type": "Polygon",
                             "coordinates": [[[1031, 584.674301], [1031, 734.763184], [1180, 734.763184], [1180, 584.674301], [1031, 584.674301]]]
