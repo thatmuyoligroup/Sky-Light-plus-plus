@@ -6,16 +6,16 @@ import Draw from "../leaflet/Draw";
 let runWhere = {}
 let result = reactive({})
 runWhere.windows = {
-    loading: false
+  loading: false
 }
 
 onMounted(() => {
-    window.onkeydown = ev => {
-        if (ev.key === 'k') bDraw();
-        if (ev.key === 'j') aDraw();
+  window.onkeydown = ev => {
+    if (ev.key === 'k') bDraw();
+    if (ev.key === 'j') aDraw();
 
 
-    }
+  }
 })
 let map = null
 let imageLayer = null
@@ -27,115 +27,115 @@ let draw = null;
 let num = 1;
 
 onMounted(() => {
-    load()
+  load()
 })
 
 let imageUrl = 'https://sky-res.muyoli.com/' +
-    'images/maps/家园/遇境.jpg';
+    'images/maps/禁阁/月牙绿洲.jpg';
 let codePrefix = "0611"
 
 let iconLayerGroup = null
 
 function load() {
-    if (!map) {
-        map = L.map('map', {
-            crs: L.CRS.Simple,
-            minZoom: -3,
-            maxZoom: 2,
-            zoomControl: false,
-            attributionControl: false,
-        });
-        iconLayerGroup = L.layerGroup()
-        iconLayerGroup.addTo(map)
-        draw = new Draw(map);
-        map.pm.addControls({
-            position: 'topleft',
-            drawCircle: false,
-        });
+  if (!map) {
+    map = L.map('map', {
+      crs: L.CRS.Simple,
+      minZoom: -3,
+      maxZoom: 2,
+      zoomControl: false,
+      attributionControl: false,
+    });
+    iconLayerGroup = L.layerGroup()
+    iconLayerGroup.addTo(map)
+    draw = new Draw(map);
+    map.pm.addControls({
+      position: 'topleft',
+      drawCircle: false,
+    });
+  }
+  let src = imageUrl
+
+  result.img = src
+  result.type = 'gis'
+  result.points = []
+  let image = new Image();
+
+  image.onload = function () {
+
+    console.log(image.width)
+    console.log(image.height)
+    if (imageLayer) {
+      imageLayer.remove()
     }
-    let src = imageUrl
 
-    result.img = src
-    result.type = 'gis'
-    result.points = []
-    let image = new Image();
+    var sol = L.latLng([0, 0]);
+    L.marker(sol).addTo(map);
+    result.width = image.width
+    result.height = image.height
+    let imgBounds = [[0, 0], [image.height, image.width]];
+    let maxBounds = [[-(image.height / 4), (-image.width / 4)], [image.height + image.height / 4, image.width + image.width / 4]];
+    imageLayer = L.imageOverlay(image, imgBounds).addTo(map);
+    map.setMaxBounds(maxBounds)
+    map.setView([0, 0], 0);
 
-    image.onload = function () {
-
-        console.log(image.width)
-        console.log(image.height)
-        if (imageLayer) {
-            imageLayer.remove()
-        }
-
-        var sol = L.latLng([0, 0]);
-        L.marker(sol).addTo(map);
-        result.width = image.width
-        result.height = image.height
-        let imgBounds = [[0, 0], [image.height, image.width]];
-        let maxBounds = [[-(image.height / 4), (-image.width / 4)], [image.height + image.height / 4, image.width + image.width / 4]];
-        imageLayer = L.imageOverlay(image, imgBounds).addTo(map);
-        map.setMaxBounds(maxBounds)
-        map.setView([0, 0], 0);
-
-        // define rectangle geographical bounds
+    // define rectangle geographical bounds
 
 // create an orange rectangle
-        L.rectangle(maxBounds, {color: "#ff7800", weight: 1}).addTo(map);
+    L.rectangle(maxBounds, {color: "#ff7800", weight: 1}).addTo(map);
 
 // zoom the map to the rectangle bounds
-        map.fitBounds(maxBounds, {maxZoom: 0});
+    map.fitBounds(maxBounds, {maxZoom: 0});
 
-    }
-    image.src = src
+  }
+  image.src = src
 
 
 }
 
 function aDraw() {
-    draw.enableDraw('Polygon', true, {
-        snappable: true,
-        templineStyle: {
-            color: "red",
-        },
-        // 提⽰线从最后⼀个标记到⿏标光标的线
-        hintlineStyle: {
-            color: "#c2effd",
-            dashArray: [5, 5],
-        },
-        // 绘制完成的样式
-        pathOptions: {
-            color: "#7de8ff",
-            // fillColor: "green",
-        }
-    }, null, (e) => {
-        console.log(geoJSON.value = draw.getFirstDrawLayer().toGeoJSON());
+  draw.enableDraw('Polygon', true, {
+    snappable: true,
+    templineStyle: {
+      color: "red",
+    },
+    // 提⽰线从最后⼀个标记到⿏标光标的线
+    hintlineStyle: {
+      color: "#c2effd",
+      dashArray: [5, 5],
+    },
+    // 绘制完成的样式
+    pathOptions: {
+      color: "#7de8ff",
+      // fillColor: "green",
+    }
+  }, null, (e) => {
+    console.log(geoJSON.value = draw.getFirstDrawLayer().toGeoJSON());
 
-        show.value = true;
-    })
+    show.value = true;
+  })
 }
 
 function bDraw() {
-    draw.enableDraw('Rectangle', true, {
-        snappable: true,
-        templineStyle: {
-            color: "red",
-        },
-        // 提⽰线从最后⼀个标记到⿏标光标的线
-        hintlineStyle: {
-            color: "#c2effd",
-            dashArray: [5, 5],
-        },
-        // 绘制完成的样式
-        pathOptions: {
-            color: "#7de8ff",
-            // fillColor: "green",
-        }
-    }, null, (e) => {
-        console.log(geoJSON.value = draw.getFirstDrawLayer().toGeoJSON());
+  draw.enableDraw('Rectangle', true, {
+    snappable: true,
+    templineStyle: {
+      color: "red",
+    },
+    // 提⽰线从最后⼀个标记到⿏标光标的线
+    hintlineStyle: {
+      color: "#c2effd",
+      dashArray: [5, 5],
+    },
+    // 绘制完成的样式
+    pathOptions: {
+      color: "#7de8ff",
+      // fillColor: "green",
+    }
+  }, null, (e) => {
+    console.log(geoJSON.value = draw.getFirstDrawLayer().toGeoJSON());
 
-        show.value = true;
-    })
+    show.value = true;
+  })
 }
 
 let show = ref(false);
@@ -146,41 +146,41 @@ let gameResult = ref([]);
 
 
 function close() {
-    let codeValue = code.value
-    geoJSON.value.properties = {code: codeValue, candlelight: candlelight.value}
-    let geoJSONValue = geoJSON.value;
-    gameResult.value.push({code: codeValue, candlelight: +candlelight.value})
-    result.points.push({code: codeValue, geoJSON: geoJSONValue})
-    num = num + 1;
-    code.value = codePrefix + (Math.floor(num / 10) ? ("" + num) : ("" + "0" + num));
+  let codeValue = code.value
+  geoJSON.value.properties = {code: codeValue, candlelight: candlelight.value}
+  let geoJSONValue = geoJSON.value;
+  gameResult.value.push({code: codeValue, candlelight: +candlelight.value})
+  result.points.push({code: codeValue, geoJSON: geoJSONValue})
+  num = num + 1;
+  code.value = codePrefix + (Math.floor(num / 10) ? ("" + num) : ("" + "0" + num));
 
-    let geoJSON1 = L.geoJSON(geoJSONValue, {
-        style: () => {
-            return {"color": '#00FF00'}
-        }
-    });
-    const myIcon = L.divIcon({
-        className: 'xxx-text',
-        html: '<p style="white-space: nowrap;">' + codeValue + '</p>'
-    })
+  let geoJSON1 = L.geoJSON(geoJSONValue, {
+    style: () => {
+      return {"color": '#00FF00'}
+    }
+  });
+  const myIcon = L.divIcon({
+    className: 'xxx-text',
+    html: '<p style="white-space: nowrap;">' + codeValue + '</p>'
+  })
 
-    geoJSON1.addTo(iconLayerGroup)
-    L.marker(geoJSON1.getBounds().getCenter(), {
-        icon: myIcon,
-        interactive: false
-    }).addTo(iconLayerGroup)
+  geoJSON1.addTo(iconLayerGroup)
+  L.marker(geoJSON1.getBounds().getCenter(), {
+    icon: myIcon,
+    interactive: false
+  }).addTo(iconLayerGroup)
 
-    candlelight.value = 0
-    geoJSON.value = null
-    show.value = false;
+  candlelight.value = 0
+  geoJSON.value = null
+  show.value = false;
 }
 
 window.result = () => JSON.stringify(result)
 window.gameResult = () => JSON.stringify(gameResult.value)
 window.geoJSON = geoJSON
 window.printResult = () => {
-    console.log(window.result())
-    console.log(window.gameResult())
+  console.log(window.result())
+  console.log(window.gameResult())
 }
 </script>
 
@@ -203,12 +203,12 @@ window.printResult = () => {
     </div>
     <el-dialog v-model="show" title="导入方案">
       <el-input
-              v-model="code"
-              placeholder="请输入Code"
+          v-model="code"
+          placeholder="请输入Code"
       />
       <el-input
-              v-model="candlelight"
-              placeholder="请输入烛火"
+          v-model="candlelight"
+          placeholder="请输入烛火"
       />
 
       <template #footer>
@@ -224,16 +224,16 @@ window.printResult = () => {
 
 <style scoped>
 .run {
-    box-shadow: 0 0 20px 0 rgba(211, 211, 211, 0.22) inset;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    min-height: 60vh;
-    padding: 10px;
-    left: -750px;
-    width: 250%;
+  box-shadow: 0 0 20px 0 rgba(211, 211, 211, 0.22) inset;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  min-height: 60vh;
+  padding: 10px;
+  left: -750px;
+  width: 250%;
 }
 
 #box {
-    min-height: 80vh;
+  min-height: 80vh;
 }
 </style>

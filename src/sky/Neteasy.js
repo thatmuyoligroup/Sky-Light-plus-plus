@@ -15,7 +15,7 @@ import Activity from "./Activity.js";
  */
 const RECOMMEND = {}
 let cache = null;
-const debug = false;
+const debug = true;
 
 const api = {
     data: 'https://sky-api.muyoli.com/data/neteasy/NeteasyData.json',
@@ -62,8 +62,8 @@ async function loadData() {
         if (result.code === 403) {
             console.warn(Data.noticeTemplate.useLocalData.message)
             ElSystemNotice.sendNotice(Data.noticeTemplate.useLocalData)
-            let dataResp = await import('./data/NeteasyData.js');
-            let mapViewDataResp = await import('./data/MapViewData.js');
+            let dataResp = await import('./data/NeteasyData.json');
+            let mapViewDataResp = await import('./data/MapViewData.json');
             delete dataResp.default.version;
             chinaData = dataResp.default;
             mapViewData = mapViewDataResp.default;
@@ -83,7 +83,7 @@ async function loadData() {
             ElSystemNotice.sendNotice(Data.noticeTemplate.newGameDataVersion, {version: chinaData.version});
         }
     }
-
+    
     // 本地数据替换到服务器数据
     {
         if (lastUseLocalGameData && !stores['main'].useLocalGameData) {
@@ -99,7 +99,7 @@ function initWhileCandle() {
     [...chinaData.whileCandleRule].forEach((value, index) => {
         whileCandleRule.CANDLE.set(index + 1, value);
     })
-
+    
     return whileCandleRule;
 }
 
@@ -116,7 +116,7 @@ function initSkyMap() {
             skyMap.createObj(map);
         })
     })
-
+    
     return skyMap;
 }
 
@@ -156,7 +156,7 @@ function checkMapViewData() {
         if (!['un_support', 'gis'].includes(type)) {
             throw new Error(`单点地图[${key}]数据type[${type}]不支持`)
         }
-
+        
         if ('gis' === type) {
             let img = obj.img;
             let points = obj.points;
@@ -183,7 +183,7 @@ function checkMapViewData() {
                 }
             })
         }
-
+        
     }
 }
 
@@ -244,15 +244,15 @@ async function analyze(date, option) {
             }
         }
     };
-
+    
     await analyzeMap(date, option, used, unused);
     analyzeSpecial(option, used, unused)
     analyzeHarvestPoint(option, used, unused, date)
     analyzeActivity(option, used, unused, date)
-
+    
     let canGetCandlelight = used.candlelight + used.floatCandlelight.fixed - used.floatCandlelight.float;
     let canGetCandle = used.candle;
-
+    
     candle = whileCandleRule.calculateCandle(canGetCandlelight) + canGetCandle;
     nextProgress = whileCandleRule.calculateNextNeedCandlelightProgress(canGetCandlelight);
     after.forEach((i, index) => {
@@ -265,7 +265,7 @@ async function analyze(date, option) {
 function analyzeSpecial(option, used, unused) {
     let special = option.special ?? [];
     let specialObj = {};
-
+    
     let names = specialCandlelight.getNames();
     let useNames = special.map(value => {
         specialObj[value.name] = value.size
@@ -274,7 +274,7 @@ function analyzeSpecial(option, used, unused) {
     let unusedNames = names.filter(name => !useNames.includes(name));
     let candlelight = special.length ? specialCandlelight.getCandlelight(...special) : 0;
     used.candlelight += candlelight
-
+    
     used.detail.special.candlelight = candlelight
     useNames.forEach(name => {
         used.detail.special.item[name] = {
@@ -284,8 +284,8 @@ function analyzeSpecial(option, used, unused) {
         }
     })
     used.detail.script.special.push(...special)
-
-
+    
+    
 }
 
 function analyzeHarvestPoint(option, used, unused, date) {
@@ -293,7 +293,7 @@ function analyzeHarvestPoint(option, used, unused, date) {
     let names = candlelightHarvestPoint.getNames();
     let useNames = [...harvestPoint] ?? [];
     let unusedNames = names.filter(name => !useNames.includes(name)) ?? [];
-
+    
     let usedCandlelight = useNames.length ? candlelightHarvestPoint.getCandlelightByNames(useNames, date) : 0;
     used.candlelight += usedCandlelight
     used.detail.harvestPoint.candlelight = usedCandlelight
@@ -304,7 +304,7 @@ function analyzeHarvestPoint(option, used, unused, date) {
         }
     })
     used.detail.script.harvestPoint.push(...useNames)
-
+    
     let unusedCandlelight = unusedNames.length ? candlelightHarvestPoint.getCandlelightByNames(unusedNames, date) : 0;
     unused.candlelight += unusedCandlelight
     unused.detail.harvestPoint.candlelight = unusedCandlelight
@@ -315,12 +315,12 @@ function analyzeHarvestPoint(option, used, unused, date) {
         }
     })
     unused.detail.script.harvestPoint.push(...unusedNames)
-
+    
 }
 
 function analyzeActivity(option, used, unused, date) {
     let activities = option.activities ?? [];
-
+    
     let usedCandlelight = activities.length ? activity.getCandlelightByNames(activities, date) : 0;
     used.candlelight += usedCandlelight
     used.detail.activity.candlelight = usedCandlelight
@@ -338,13 +338,13 @@ async function analyzeMap(date, option, used, unused) {
     let usedName = maps.map(value => value.name) ?? [];
     let allName = skyMap.getAllName();
     let unusedName = allName.filter(name => !usedName.includes(name));
-
+    
     const usedTask = new Promise((resolve, reject) => {
         maps.forEach(map => {
             let name = map.name;
             let ignoreCodes = map.ignoreCodes ?? [];
             let importCodes = map.importCodes;
-
+            
             // 组火特殊逻辑
             let groupCandlelight = skyMap.getMapByName(name).groupCandlelight;
             if (groupCandlelight) {
@@ -362,9 +362,9 @@ async function analyzeMap(date, option, used, unused) {
                             }
                         })
                     })
-
+                    
                 }
-
+                
                 if (unusedCodes.length) {
                     calculateMap(name, date, unusedCodes, unused.detail.maps.candlelight);
                     calculateMap(name, date, unusedCodes, unused)
@@ -375,8 +375,8 @@ async function analyzeMap(date, option, used, unused) {
                 handleDetailMap(used, name, useCodes, date);
                 return;
             }
-
-
+            
+            
             // 正常烛火逻辑
             let codes = skyMap.getCandlelightPointCodesByName(name);
             let unusedCodes = []
@@ -402,8 +402,8 @@ async function analyzeMap(date, option, used, unused) {
                     }
                 });
             }
-
-
+            
+            
             if (unusedCodes.length) {
                 calculateMap(name, date, unusedCodes, unused.detail.maps.candlelight);
                 calculateMap(name, date, unusedCodes, unused)
@@ -415,7 +415,7 @@ async function analyzeMap(date, option, used, unused) {
         })
         resolve()
     })
-
+    
     const unusedTask = new Promise((resolve, reject) => {
         unusedName.forEach(name => {
             calculateMap(name, date, [], unused.detail.maps.candlelight);
@@ -424,7 +424,7 @@ async function analyzeMap(date, option, used, unused) {
         })
         resolve();
     })
-
+    
     let done = await Promise.all([usedTask, unusedTask]);
 }
 
@@ -447,7 +447,7 @@ function handleDetailMap(obj, name, codes, date) {
             item: {}
         };
     }
-
+    
     let item = base.item[name] = {
         basename: basename,
         desc: skyMap.getMapByName(name).desc,
@@ -464,7 +464,7 @@ function handleDetailMap(obj, name, codes, date) {
 }
 
 async function build() {
-
+    
     await loadData();
     whileCandleRule = initWhileCandle();
     skyMap = initSkyMap();
@@ -479,8 +479,8 @@ async function build() {
     candlelightHarvestPoint = initCandlelightHarvestPoint();
     activity = initActivity();
     checkMapViewData();
-
-
+    
+    
     return {
         aesKey: "jianjianghui",
         cache: cache,
