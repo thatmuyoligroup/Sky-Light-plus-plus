@@ -217,7 +217,7 @@
             "type": "Feature",
             "properties": {
               "code": "000107",
-              "candlelight": "5"
+              "candlelight": "6"
             },
             "geometry": {
               "type": "Polygon",
