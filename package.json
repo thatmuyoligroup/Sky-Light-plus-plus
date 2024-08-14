@@ -11,24 +11,25 @@
   },
   "dependencies": {
     "@geoman-io/leaflet-geoman-free": "^2.13.1",
-    "axios": "^1.2.1",
+    "axios": "^1.7.2",
     "crypto-js": "^4.1.1",
     "current-device": "^0.10.2",
-    "dayjs": "^1.11.7",
+    "dayjs": "^1.11.11",
     "element-plus": "^2.2.27",
     "leaflet": "^1.9.3",
-    "pinia": "^2.0.26",
-    "pinia-plugin-persistedstate": "^3.0.2",
+    "pinia": "^2.1.7",
+    "pinia-plugin-persistedstate": "^3.2.1",
     "sass": "^1.57.1",
     "scss": "^0.2.4",
     "vant": "^4.0.7",
-    "vue": "^3.2.45",
-    "vue-router": "^4.1.6"
+    "vue": "^3.4.32",
+    "vue-router": "^4.4.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^3.2.0",
-    "eslint": "^8.22.0",
-    "eslint-plugin-vue": "^9.3.0",
-    "vite": "^3.2.4"
+    "@vitejs/plugin-vue": "^5.0.5",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.27.0",
+    "vite": "^5.3.4",
+    "vite-plugin-vue-devtools": "^7.3.6"
   }
 }

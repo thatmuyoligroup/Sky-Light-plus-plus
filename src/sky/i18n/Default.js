@@ -290,8 +290,8 @@ const help = {
                     type: 'itemFloat',
                     content: `当存在计算分析结果时，可使用预测功能根据此结果进行多日后蜡烛总数的预测<br/>
                             合成进度参考图：
-                            <img v-if="isMobile() || isTablet()" style="width: 100%" alt="无法加载" src="https://sky-res.muyoli.com/images/SkyCandleDemo.jpg" @click="showImagePreview({images: ['https://sky-res.muyoli.com/images/SkyCandleDemo.jpg'],closeable: true})"/>
-                            <el-image v-else style="width: 100%" alt="无法加载" src="https://sky-res.muyoli.com/images/SkyCandleDemo.jpg"  :preview-src-list="['https://sky-res.muyoli.com/images/SkyCandleDemo.jpg']" />
+                            <img v-if="isMobile() || isTablet()" style="width: 100%" alt="无法加载" src="/images/SkyCandleDemo.jpg" @click="showImagePreview({images: ['/images/SkyCandleDemo.jpg'],closeable: true})"/>
+                            <el-image v-else style="width: 100%" alt="无法加载" src="/images/SkyCandleDemo.jpg"  :preview-src-list="['/images/SkyCandleDemo.jpg']" />
                         `,
                 }, {
                     title: '清空',
@@ -336,12 +336,12 @@ const help = {
             type: 'itemFloat',
             content: `
                        <template v-if="isDark">
-                       <img v-if="isMobile() || isTablet()" style="width: 100%" alt="无法加载" src="https://sky-res.muyoli.com/images/烛火统计-dark.jpg" @click="showImagePreview({images: ['https://sky-res.muyoli.com/images/烛火统计-dark.jpg'],closeable: true})"/>
-                        <el-image v-else style="width: 100%" alt="无法加载" src="https://sky-res.muyoli.com/images/烛火统计-dark.jpg"  :preview-src-list="['https://sky-res.muyoli.com/images/烛火统计-dark.jpg']" />
+                       <img v-if="isMobile() || isTablet()" style="width: 100%" alt="无法加载" src="/images/烛火统计-dark.jpg" @click="showImagePreview({images: ['/images/烛火统计-dark.jpg'],closeable: true})"/>
+                        <el-image v-else style="width: 100%" alt="无法加载" src="/images/烛火统计-dark.jpg"  :preview-src-list="['/images/烛火统计-dark.jpg']" />
                         </template>
                         <template v-else>
-                        <img v-if="isMobile() || isTablet()" style="width: 100%" alt="无法加载" src="https://sky-res.muyoli.com/images/烛火统计.jpg" @click="showImagePreview({images: ['https://sky-res.muyoli.com/images/烛火统计.jpg'],closeable: true})"/>
-                        <el-image v-else style="width: 100%" alt="无法加载" src="https://sky-res.muyoli.com/images/烛火统计.jpg"  :preview-src-list="['https://sky-res.muyoli.com/images/烛火统计.jpg']" />
+                        <img v-if="isMobile() || isTablet()" style="width: 100%" alt="无法加载" src="/images/烛火统计.jpg" @click="showImagePreview({images: ['/images/烛火统计.jpg'],closeable: true})"/>
+                        <el-image v-else style="width: 100%" alt="无法加载" src="/images/烛火统计.jpg"  :preview-src-list="['/images/烛火统计.jpg']" />
                         </template>
                         
             `,

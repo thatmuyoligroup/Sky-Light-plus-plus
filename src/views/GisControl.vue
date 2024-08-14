@@ -30,7 +30,7 @@ onMounted(() => {
   load()
 })
 
-let imageUrl = 'https://sky-res.muyoli.com/' +
+let imageUrl = '/' +
     'images/maps/禁阁/月牙绿洲.jpg';
 let codePrefix = "0611"
 

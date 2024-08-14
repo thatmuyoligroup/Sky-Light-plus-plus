@@ -15,7 +15,7 @@ import Activity from "./Activity.js";
  */
 const RECOMMEND = {}
 let cache = null;
-const debug = false;
+const debug = true;
 
 const api = {
     data: 'https://sky-api.muyoli.com/data/neteasy/NeteasyData.json',

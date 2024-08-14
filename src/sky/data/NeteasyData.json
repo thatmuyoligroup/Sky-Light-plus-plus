@@ -2415,8 +2415,8 @@
     },
     {
       "name": "列队历练",
-      "candlelight": 30,
-      "maxSize": 9,
+      "candlelight": 1,
+      "maxSize": 100,
       "desc": "",
       "option": {
         "group": {

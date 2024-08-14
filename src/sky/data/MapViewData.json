@@ -28,7 +28,7 @@
   },
   "mapView": {
     "遇境": {
-      "img": "https://sky-res.muyoli.com/images/maps/家园/small/遇境.jpg",
+      "img": "/images/maps/家园/small/遇境.jpg",
       "type": "gis",
       "points": [
         {
@@ -253,7 +253,7 @@
       "height": 1668
     },
     "云巢": {
-      "img": "https://sky-res.muyoli.com/images/maps/家园/云巢.jpg",
+      "img": "/images/maps/家园/云巢.jpg",
       "type": "gis",
       "points": [
         {
@@ -594,7 +594,7 @@
       "height": 1668
     },
     "晨岛": {
-      "img": "https://sky-res.muyoli.com/images/maps/晨岛/small/晨岛-晨岛.jpg",
+      "img": "/images/maps/晨岛/small/晨岛-晨岛.jpg",
       "type": "gis",
       "points": [
         {
@@ -935,7 +935,7 @@
       "height": 1668
     },
     "预言山谷": {
-      "img": "https://sky-res.muyoli.com/images/maps/晨岛/small/晨岛-预言山谷.jpg",
+      "img": "/images/maps/晨岛/small/晨岛-预言山谷.jpg",
       "type": "gis",
       "points": [
         {
@@ -1015,7 +1015,7 @@
       "height": 1668
     },
     "水之试炼": {
-      "img": "https://sky-res.muyoli.com/images/maps/晨岛/small/晨岛-水之试炼.jpg",
+      "img": "/images/maps/晨岛/small/晨岛-水之试炼.jpg",
       "type": "gis",
       "points": [
         {
@@ -1131,7 +1131,7 @@
       "height": 1668
     },
     "土之试炼": {
-      "img": "https://sky-res.muyoli.com/images/maps/晨岛/small/晨岛-土之试炼.jpg",
+      "img": "/images/maps/晨岛/small/晨岛-土之试炼.jpg",
       "type": "gis",
       "points": [
         {
@@ -1401,7 +1401,7 @@
       "content": "${name}有四堆大蜡烛共${candlelight}烛火全在一起，无需单独选择烛火点"
     },
     "云野小广场": {
-      "img": "https://sky-res.muyoli.com/images/maps/云野/small/云野小广场.jpg",
+      "img": "/images/maps/云野/small/云野小广场.jpg",
       "type": "gis",
       "points": [
         {
@@ -1517,7 +1517,7 @@
       "height": 1668
     },
     "蝴蝶平原": {
-      "img": "https://sky-res.muyoli.com/images/maps/云野/small/云野-蝴蝶平原.jpg",
+      "img": "/images/maps/云野/small/云野-蝴蝶平原.jpg",
       "type": "gis",
       "points": [
         {
@@ -1741,7 +1741,7 @@
       "height": 1668
     },
     "幽光山洞": {
-      "img": "https://sky-res.muyoli.com/images/maps/云野/small/云野-幽光山洞.jpg",
+      "img": "/images/maps/云野/small/云野-幽光山洞.jpg",
       "type": "gis",
       "points": [
         {
@@ -2073,7 +2073,7 @@
       "height": 1668
     },
     "云顶浮石": {
-      "img": "https://sky-res.muyoli.com/images/maps/云野/small/云野-浮岛.jpg",
+      "img": "/images/maps/云野/small/云野-浮岛.jpg",
       "type": "gis",
       "points": [
         {
@@ -2441,7 +2441,7 @@
       "height": 1668
     },
     "圣岛": {
-      "img": "https://sky-res.muyoli.com/images/maps/云野/small/云野-圣岛.jpg",
+      "img": "/images/maps/云野/small/云野-圣岛.jpg",
       "type": "gis",
       "points": [
         {
@@ -3077,7 +3077,7 @@
       "height": 1668
     },
     "仙乡": {
-      "img": "https://sky-res.muyoli.com/images/maps/云野/small/云野-三塔.jpg",
+      "img": "/images/maps/云野/small/云野-三塔.jpg",
       "type": "gis",
       "points": [
         {
@@ -3481,7 +3481,7 @@
       "height": 1668
     },
     "中央神坛": {
-      "img": "https://sky-res.muyoli.com/images/maps/云野/small/云野-八人门.jpg",
+      "img": "/images/maps/云野/small/云野-八人门.jpg",
       "type": "gis",
       "points": [
         {
@@ -3597,7 +3597,7 @@
       "height": 1668
     },
     "云野神殿": {
-      "img": "https://sky-res.muyoli.com/images/maps/云野/small/云野-神庙.jpg",
+      "img": "/images/maps/云野/small/云野-神庙.jpg",
       "type": "gis",
       "points": [
         {
@@ -3821,7 +3821,7 @@
       "height": 1668
     },
     "风行网道": {
-      "img": "https://sky-res.muyoli.com/images/maps/雨林/small/风行网道.jpg",
+      "img": "/images/maps/雨林/small/风行网道.jpg",
       "type": "gis",
       "points": [
         {
@@ -4873,7 +4873,7 @@
       "height": 3336
     },
     "静谧庭院": {
-      "img": "https://sky-res.muyoli.com/images/maps/雨林/small/静谧庭院.jpg",
+      "img": "/images/maps/雨林/small/静谧庭院.jpg",
       "type": "gis",
       "points": [
         {
@@ -5277,7 +5277,7 @@
       "height": 1668
     },
     "大树屋": {
-      "img": "https://sky-res.muyoli.com/images/maps/雨林/small/大树屋.jpg",
+      "img": "/images/maps/雨林/small/大树屋.jpg",
       "type": "gis",
       "points": [
         {
@@ -5681,7 +5681,7 @@
       "height": 1668
     },
     "荧光森林": {
-      "img": "https://sky-res.muyoli.com/images/maps/雨林/small/荧光森林.jpg",
+      "img": "/images/maps/雨林/small/荧光森林.jpg",
       "type": "gis",
       "points": [
         {
@@ -6553,7 +6553,7 @@
       "height": 1668
     },
     "秘密花园": {
-      "img": "https://sky-res.muyoli.com/images/maps/雨林/small/秘密花园.jpg",
+      "img": "/images/maps/雨林/small/秘密花园.jpg",
       "type": "gis",
       "points": [
         {
@@ -6885,7 +6885,7 @@
       "height": 1668
     },
     "地下溶洞": {
-      "img": "https://sky-res.muyoli.com/images/maps/雨林/small/玄妙绿境.jpg",
+      "img": "/images/maps/雨林/small/玄妙绿境.jpg",
       "type": "gis",
       "points": [
         {
@@ -7037,7 +7037,7 @@
       "height": 1668
     },
     "密林遗迹": {
-      "img": "https://sky-res.muyoli.com/images/maps/雨林/small/密林遗迹.jpg",
+      "img": "/images/maps/雨林/small/密林遗迹.jpg",
       "type": "gis",
       "points": [
         {
@@ -7945,7 +7945,7 @@
       "height": 3336
     },
     "雨林神殿": {
-      "img": "https://sky-res.muyoli.com/images/maps/雨林/small/神庙.jpg",
+      "img": "/images/maps/雨林/small/神庙.jpg",
       "type": "gis",
       "points": [
         {
@@ -8241,7 +8241,7 @@
       "height": 3336
     },
     "圆梦村": {
-      "img": "https://sky-res.muyoli.com/images/maps/霞谷/small/圆梦村.jpg",
+      "img": "/images/maps/霞谷/small/圆梦村.jpg",
       "type": "gis",
       "points": [
         {
@@ -8372,7 +8372,7 @@
       "content": "${name}只有${size}个大蜡烛烛火点。可在特别烛火中继续选择“雪人竞速”项目"
     },
     "冰道": {
-      "img": "https://sky-res.muyoli.com/images/maps/霞谷/small/冰道.jpg",
+      "img": "/images/maps/霞谷/small/冰道.jpg",
       "type": "gis",
       "points": [
         {
@@ -8668,7 +8668,7 @@
       "height": 1668
     },
     "滑冰场": {
-      "img": "https://sky-res.muyoli.com/images/maps/霞谷/small/溜冰场.jpg",
+      "img": "/images/maps/霞谷/small/溜冰场.jpg",
       "type": "gis",
       "points": [
         {
@@ -8892,7 +8892,7 @@
       "height": 1668
     },
     "霞光城": {
-      "img": "https://sky-res.muyoli.com/images/maps/霞谷/small/霞光城.jpg",
+      "img": "/images/maps/霞谷/small/霞光城.jpg",
       "type": "gis",
       "points": [
         {
@@ -9296,7 +9296,7 @@
       "height": 1668
     },
     "飞行赛道神殿": {
-      "img": "https://sky-res.muyoli.com/images/maps/霞谷/small/飞行起点.jpg",
+      "img": "/images/maps/霞谷/small/飞行起点.jpg",
       "type": "gis",
       "points": [
         {
@@ -9674,7 +9674,7 @@
       "content": "${name}可获得一根蜡烛，无需单独选择烛火点"
     },
     "落日竞技场": {
-      "img": "https://sky-res.muyoli.com/images/maps/霞谷/small/终点.jpg",
+      "img": "/images/maps/霞谷/small/终点.jpg",
       "type": "gis",
       "points": [
         {
@@ -9934,7 +9934,7 @@
       "height": 1668
     },
     "霞谷神殿": {
-      "img": "https://sky-res.muyoli.com/images/maps/霞谷/small/神庙.jpg",
+      "img": "/images/maps/霞谷/small/神庙.jpg",
       "type": "gis",
       "points": [
         {
@@ -10125,7 +10125,7 @@
       "type": "un_support"
     },
     "边陲荒漠": {
-      "img": "https://sky-res.muyoli.com/images/maps/墓土/small/边陲荒漠.jpg",
+      "img": "/images/maps/墓土/small/边陲荒漠.jpg",
       "type": "gis",
       "points": [
         {
@@ -10709,7 +10709,7 @@
       "height": 1668
     },
     "失落方舟": {
-      "img": "https://sky-res.muyoli.com/images/maps/墓土/small/失落方舟.jpg",
+      "img": "/images/maps/墓土/small/失落方舟.jpg",
       "type": "gis",
       "points": [
         {
@@ -11293,7 +11293,7 @@
       "height": 1668
     },
     "巨兽荒原": {
-      "img": "https://sky-res.muyoli.com/images/maps/墓土/small/巨兽荒原.jpg",
+      "img": "/images/maps/墓土/small/巨兽荒原.jpg",
       "type": "gis",
       "points": [
         {
@@ -11877,7 +11877,7 @@
       "height": 3336
     },
     "黑水港湾": {
-      "img": "https://sky-res.muyoli.com/images/maps/墓土/small/沉船.jpg",
+      "img": "/images/maps/墓土/small/沉船.jpg",
       "type": "gis",
       "points": [
         {
@@ -12353,7 +12353,7 @@
       "height": 1668
     },
     "远古战场": {
-      "img": "https://sky-res.muyoli.com/images/maps/墓土/small/远古战场.jpg",
+      "img": "/images/maps/墓土/small/远古战场.jpg",
       "type": "gis",
       "points": [
         {
@@ -12829,7 +12829,7 @@
       "height": 1668
     },
     "墓土神殿": {
-      "img": "https://sky-res.muyoli.com/images/maps/墓土/small/神庙.jpg",
+      "img": "/images/maps/墓土/small/神庙.jpg",
       "type": "gis",
       "points": [
         {
@@ -12981,7 +12981,7 @@
       "height": 1668
     },
     "底层": {
-      "img": "https://sky-res.muyoli.com/images/maps/禁阁/small/初始层.jpg",
+      "img": "/images/maps/禁阁/small/初始层.jpg",
       "type": "gis",
       "points": [
         {
@@ -13133,7 +13133,7 @@
       "height": 1668
     },
     "星光沙漠": {
-      "img": "https://sky-res.muyoli.com/images/maps/禁阁/small/星漠.jpg",
+      "img": "/images/maps/禁阁/small/星漠.jpg",
       "type": "gis",
       "points": [
         {
@@ -13753,7 +13753,7 @@
       "height": 1668
     },
     "秘密基地": {
-      "img": "https://sky-res.muyoli.com/images/maps/禁阁/small/办公室.jpg",
+      "img": "/images/maps/禁阁/small/办公室.jpg",
       "type": "gis",
       "points": [
         {
@@ -14049,7 +14049,7 @@
       "height": 5004
     },
     "档案阁": {
-      "img": "https://sky-res.muyoli.com/images/maps/禁阁/small/秘密空间.jpg",
+      "img": "/images/maps/禁阁/small/秘密空间.jpg",
       "type": "gis",
       "points": [
         {
@@ -14345,7 +14345,7 @@
       "height": 1668
     },
     "二层": {
-      "img": "https://sky-res.muyoli.com/images/maps/禁阁/small/一层.jpg",
+      "img": "/images/maps/禁阁/small/一层.jpg",
       "type": "gis",
       "points": [
         {
@@ -14461,7 +14461,7 @@
       "height": 1668
     },
     "三层": {
-      "img": "https://sky-res.muyoli.com/images/maps/禁阁/small/二层.jpg",
+      "img": "/images/maps/禁阁/small/二层.jpg",
       "type": "gis",
       "points": [
         {
@@ -14577,7 +14577,7 @@
       "height": 1668
     },
     "四层": {
-      "img": "https://sky-res.muyoli.com/images/maps/禁阁/small/三层.jpg",
+      "img": "/images/maps/禁阁/small/三层.jpg",
       "type": "gis",
       "points": [
         {
@@ -14837,7 +14837,7 @@
       "height": 1668
     },
     "顶层": {
-      "img": "https://sky-res.muyoli.com/images/maps/禁阁/small/顶层.jpg",
+      "img": "/images/maps/禁阁/small/顶层.jpg",
       "type": "gis",
       "points": [
         {
@@ -15133,7 +15133,7 @@
       "height": 1668
     },
     "庇护所": {
-      "img": "https://sky-res.muyoli.com/images/maps/禁阁/small/庇护所.jpg",
+      "img": "/images/maps/禁阁/small/庇护所.jpg",
       "type": "gis",
       "points": [
         {
@@ -15393,7 +15393,7 @@
       "height": 1668
     },
     "月牙绿洲": {
-      "img": "https://sky-res.muyoli.com/images/maps/禁阁/月牙绿洲.jpg",
+      "img": "/images/maps/禁阁/月牙绿洲.jpg",
       "type": "gis",
       "points": [
         {
