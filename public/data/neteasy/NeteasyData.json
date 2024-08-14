@@ -619,15 +619,7 @@
             "candlelight": 5
           },
           {
-            "code": "030207",
-            "candlelight": 5
-          },
-          {
             "code": "030208",
-            "candlelight": 5
-          },
-          {
-            "code": "030209",
             "candlelight": 5
           },
           {
@@ -950,10 +942,6 @@
             "candlelight": 6
           },
           {
-            "code": "030523",
-            "candlelight": 1
-          },
-          {
             "code": "030524",
             "candlelight": 7
           }
@@ -1197,10 +1185,6 @@
             "candlelight": 50
           },
           {
-            "code": "040202",
-            "candlelight": 1
-          },
-          {
             "code": "040203",
             "type": 3,
             "candlelight": 50
@@ -1223,10 +1207,6 @@
       {
         "name": "音乐大厅",
         "candlelightPoints": [
-          {
-            "code": "040401",
-            "candlelight": 3
-          }
         ]
       },
       {
@@ -1423,10 +1403,6 @@
           {
             "code": "041203",
             "candlelight": 3
-          },
-          {
-            "code": "041204",
-            "candlelight": 5
           },
           {
             "code": "041205",
@@ -1693,10 +1669,6 @@
             "candlelight": 12
           },
           {
-            "code": "050508",
-            "candlelight": 1
-          },
-          {
             "code": "050509",
             "candlelight": 12,
             "appearIn": 135
@@ -1728,10 +1700,6 @@
           {
             "code": "050515",
             "candlelight": 38
-          },
-          {
-            "code": "050516",
-            "candlelight": 1
           }
         ]
       },
@@ -1868,10 +1836,6 @@
       {
         "name": "墓土神殿",
         "candlelightPoints": [
-          {
-            "code": "050801",
-            "candlelight": 3
-          },
           {
             "code": "050802",
             "candlelight": 11
@@ -2131,10 +2095,6 @@
             "candlelight": 3
           },
           {
-            "code": "060602",
-            "candlelight": 3
-          },
-          {
             "code": "060603",
             "candlelight": 9
           }
@@ -2203,10 +2163,6 @@
           {
             "code": "060906",
             "candlelight": 3
-          },
-          {
-            "code": "060907",
-            "candlelight": 6
           },
           {
             "code": "060908",
@@ -2350,7 +2306,7 @@
         },
         "input": true,
         "inputStep": {
-          "step": 10,
+          "step": 5,
           "strictly": true
         },
         "inputPlaceholder": "完成进度"
@@ -2373,7 +2329,7 @@
     {
       "name": "信任历练",
       "candlelight": 2,
-      "maxSize": 40,
+      "maxSize": 58,
       "desc": "",
       "option": {
         "group": {
@@ -2386,9 +2342,8 @@
     },
     {
       "name": "互助历练",
-      "lowestCandlelight": 96,
-      "candlelight": 8,
-      "maxSize": 12,
+      "candlelight": 12,
+      "maxSize": 18,
       "desc": "",
       "option": {
         "group": {
@@ -2402,7 +2357,7 @@
     {
       "name": "合作历练",
       "candlelight": 8,
-      "maxSize": 15,
+      "maxSize": 17,
       "desc": "",
       "option": {
         "group": {
@@ -2421,6 +2376,20 @@
       "option": {
         "group": {
           "name": "夜行历练",
+          "type": "button"
+        },
+        "input": true,
+        "inputPlaceholder": "完成进度"
+      }
+    },
+    {
+      "name": "小狗排队",
+      "candlelight": 1,
+      "maxSize": 99,
+      "desc": "",
+      "option": {
+        "group": {
+          "name": "嘉年华",
           "type": "button"
         },
         "input": true,
