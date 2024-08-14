@@ -1,8 +1,8 @@
 import locale from 'element-plus/dist/locale/zh-cn.mjs'
 
-const dataVersion = "Ver.12.5.2";
-const gameVersion = "0.12.5.256958.34232";
-const version = "Ver.1.5.1 (202401242320)";
+const dataVersion = "Ver.12.6.2";
+const gameVersion = "0.12.8.275098.37667";
+const version = "Ver.1.6.0 (202408142304)";
 
 const contributor = [
     '<a href="https://weibo.com/u/7360748659">游离</a>',

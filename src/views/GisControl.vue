@@ -2,6 +2,9 @@
 
 import {onMounted, reactive, ref} from "vue";
 import Draw from "../leaflet/Draw";
+import {useRoute} from "vue-router";
+
+let route = useRoute();
 
 let runWhere = {}
 let result = reactive({})
@@ -30,9 +33,8 @@ onMounted(() => {
   load()
 })
 
-let imageUrl = '/' +
-    'images/maps/禁阁/月牙绿洲.jpg';
-let codePrefix = "0611"
+let imageUrl = route.query.img;
+let codePrefix = route.query.code
 
 let iconLayerGroup = null
 

@@ -18,8 +18,8 @@ let cache = null;
 const debug = true;
 
 const api = {
-    data: 'https://sky-api.muyoli.com/data/neteasy/NeteasyData.json',
-    mapViewData: 'https://sky-api.muyoli.com/data/neteasy/MapViewData.json'
+    data: '/data/neteasy/NeteasyData.json',
+    mapViewData: '/data/neteasy/MapViewData.json'
 };
 
 let chinaData;
@@ -37,9 +37,6 @@ let activity;
 let tryNum = 3;
 
 async function loadServerData() {
-    if (debug) {
-        return {code: 403, msg: 'debug'};
-    }
     if (!tryNum) {
         return {code: 403, msg: 'fuse'};
     }
@@ -59,17 +56,6 @@ async function loadData() {
     let lastUseLocalGameData = stores['main'].useLocalGameData;
     while (true) {
         let result = await loadServerData();
-        if (result.code === 403) {
-            console.warn(Data.noticeTemplate.useLocalData.message)
-            ElSystemNotice.sendNotice(Data.noticeTemplate.useLocalData)
-            let dataResp = await import('./data/NeteasyData.json');
-            let mapViewDataResp = await import('./data/MapViewData.json');
-            delete dataResp.default.version;
-            chinaData = dataResp.default;
-            mapViewData = mapViewDataResp.default;
-            stores['main'].useLocalGameData = true
-            break;
-        }
         if (result.code === 200) {
             stores['main'].useLocalGameData = false
             break;
