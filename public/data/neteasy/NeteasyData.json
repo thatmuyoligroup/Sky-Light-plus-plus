@@ -1,5 +1,5 @@
 {
-  "version": "Ver.12.6.2",
+  "version": "Ver.12.9.0",
   "candlelightType": {
     "普通蜡烛": 1,
     "普通黑暗植物": 2,
@@ -582,6 +582,14 @@
           {
             "code": "020806",
             "candlelight": 5
+          },
+          {
+            "code": "020807",
+            "candlelight": 28
+          },
+          {
+            "code": "020808",
+            "candlelight": 23
           }
         ]
       }

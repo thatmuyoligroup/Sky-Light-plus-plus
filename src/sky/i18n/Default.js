@@ -1,19 +1,19 @@
 import locale from 'element-plus/dist/locale/zh-cn.mjs'
 
-const dataVersion = "Ver.12.6.2";
-const gameVersion = "0.12.8.275098.37667";
+const dataVersion = "Ver.12.9.0";
+const gameVersion = "0.12.9.280998.38765";
 const version = "Ver.1.6.0 (202408142304)";
 
 const contributor = [
     '<a href="https://weibo.com/u/7360748659">游离</a>',
     '<a href="https://weibo.com/u/5685423899">包包</a>',
-    '<a href="https://v.kuaishou.com/Ejc9ZN">氢腥</a>',
+    '氢腥',
     '江晖',
     '松奈',
     '<a href="https://weibo.com/u/2630772743">冰介</a>',
     '<a href="https://weibo.com/u/5861905692">雨季</a>',
-    '<a href="https://v.kuaishou.com/ESzeL1">海天</a>',
-    '<a href="https://v.douyin.com/kJP95dP">阿圤</a>',
+    '海天',
+    '阿圤',
 ];
 
 shuffle(contributor)
@@ -346,7 +346,7 @@ const help = {
                         
             `,
         },
-    
+
     ]
 }
 
@@ -369,5 +369,5 @@ export default {
         本项目中使用的《光·遇》地图名称及建模截图，其版权属于thatgamecompany。</span><br/><a href="https://weibo.com/u/6073956879">@Muyoli_木月里</a>
      
     `,
-    
+
 }

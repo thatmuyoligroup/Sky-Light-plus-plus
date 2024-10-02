@@ -33,3 +33,4 @@ doc/data/**
 disk
 
 package-lock.json
+/pnpm-lock.yaml
